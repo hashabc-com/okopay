@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Global Payments Made Simple",
+    "subtitle": "Fast, Secure Cross-Border Transactions",
+    "description": "Send money globally in seconds with low fees, real-time tracking, and support for 150+ countries and 50+ currencies.",
+    "cta": "Start Sending Now",
+    "secondaryCta": "Learn More",
+    "trusted": "Trusted by"
+  },
+  "features": {
+    "title": "Why Choose OkoPay",
+    "subtitle": "Everything you need for seamless international payments",
+    "speed": {
+      "title": "Lightning Fast",
+      "description": "Complete cross-border transfers in seconds, not days"
+    },
+    "security": {
+      "title": "Bank-Level Security",
+      "description": "Military-grade encryption and compliance with global standards"
+    },
+    "lowFees": {
+      "title": "Low Fees",
+      "description": "Transparent pricing with no hidden charges. Save up to 90% on fees"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service in multiple languages"
+    },
+    "currencies": {
+      "title": "50+ Currencies",
+      "description": "Support for major and local currencies worldwide"
+    },
+    "tracking": {
+      "title": "Real-Time Tracking",
+      "description": "Track your money every step of the way"
+    }
+  },
+  "stats": {
+    "countries": {
+      "value": "150+",
+      "label": "Countries"
+    },
+    "users": {
+      "value": "2M+",
+      "label": "Active Users"
+    },
+    "transactions": {
+      "value": "$50B+",
+      "label": "Processed"
+    },
+    "rating": {
+      "value": "4.9/5",
+      "label": "User Rating"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Send money globally in 3 simple steps",
+    "step1": {
+      "title": "Choose Recipient",
+      "description": "Select country and enter recipient details"
+    },
+    "step2": {
+      "title": "Enter Amount",
+      "description": "See exchange rate and fees instantly"
+    },
+    "step3": {
+      "title": "Send Money",
+      "description": "Complete payment and track in real-time"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join millions who trust OkoPay for their international transfers"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join millions using OkoPay for fast, secure international payments",
+    "button": "Create Free Account",
+    "noCard": "No credit card required"
+  },
+  "footer": {
+    "description": "Fast, secure cross-border payments for everyone",
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "rights": "© 2026 OkoPay. All rights reserved."
+  }
+}

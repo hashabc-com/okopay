@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "价格",
+    "about": "关于",
+    "contact": "联系",
+    "getStarted": "立即开始"
+  },
+  "hero": {
+    "title": "全球支付，化繁为简",
+    "subtitle": "快速安全的跨境汇款",
+    "description": "秒速完成全球汇款，低费率、实时追踪，支持150多个国家和50多种货币。",
+    "cta": "立即汇款",
+    "secondaryCta": "了解更多",
+    "trusted": "信赖我们的"
+  },
+  "features": {
+    "title": "为什么选择 OkoPay",
+    "subtitle": "您需要的一切，尽在跨境支付",
+    "speed": {
+      "title": "极速到账",
+      "description": "跨境转账只需几秒，而非数天"
+    },
+    "security": {
+      "title": "银行级安全",
+      "description": "军用级加密，符合全球安全标准"
+    },
+    "lowFees": {
+      "title": "低手续费",
+      "description": "透明定价，无隐藏费用。节省高达90%"
+    },
+    "support": {
+      "title": "24/7 客服",
+      "description": "全天候多语言客户服务"
+    },
+    "currencies": {
+      "title": "50+ 货币",
+      "description": "支持全球主要及本地货币"
+    },
+    "tracking": {
+      "title": "实时追踪",
+      "description": "随时掌握资金动态"
+    }
+  },
+  "stats": {
+    "countries": {
+      "value": "150+",
+      "label": "国家"
+    },
+    "users": {
+      "value": "200万+",
+      "label": "活跃用户"
+    },
+    "transactions": {
+      "value": "$500亿+",
+      "label": "交易额"
+    },
+    "rating": {
+      "value": "4.9/5",
+      "label": "用户评分"
+    }
+  },
+  "howItWorks": {
+    "title": "如何使用",
+    "subtitle": "3步完成全球汇款",
+    "step1": {
+      "title": "选择收款人",
+      "description": "选择国家并输入收款人信息"
+    },
+    "step2": {
+      "title": "输入金额",
+      "description": "即时查看汇率和手续费"
+    },
+    "step3": {
+      "title": "发送汇款",
+      "description": "完成支付并实时追踪"
+    }
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "加入数百万信赖 OkoPay 的用户"
+  },
+  "cta": {
+    "title": "准备好开始了吗？",
+    "subtitle": "加入数百万使用 OkoPay 进行快速安全跨境支付的用户",
+    "button": "免费注册",
+    "noCard": "无需信用卡"
+  },
+  "footer": {
+    "description": "为所有人提供快速、安全的跨境支付",
+    "product": "产品",
+    "company": "公司",
+    "support": "支持",
+    "legal": "法律",
+    "followUs": "关注我们",
+    "rights": "© 2026 OkoPay. 保留所有权利。"
+  }
+}
