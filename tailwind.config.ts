@@ -35,6 +35,12 @@ const config: Config = {
           800: '#5B21B6',
           900: '#4C1D95',
         },
+        orange: {
+          25: '#FFFBF5',
+        },
+        amber: {
+          25: '#FFFCF5',
+        },
       },
       fontFamily: {
         sans: ['var(--font-dm-sans)', 'sans-serif'],

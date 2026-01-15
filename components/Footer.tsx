@@ -43,7 +43,7 @@ export default function Footer() {
               OkoPay
             </span>
             <p className="text-slate-400 mb-6">
-              {t.footer.description}
+              {t('footer.description')}
             </p>
             {/* Social links */}
             <div className="flex gap-4">
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t.footer.product}</h3>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.product')}</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t.footer.company}</h3>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.company')}</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t.footer.support}</h3>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.support')}</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t.footer.legal}</h3>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
@@ -123,7 +123,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            {t.footer.rights}
+            {t('footer.rights')}
           </p>
           <div className="flex items-center gap-6 text-sm text-slate-500">
             <span className="flex items-center gap-2">

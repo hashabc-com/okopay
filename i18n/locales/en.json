@@ -1,11 +1,31 @@
 {
   "nav": {
     "home": "Home",
-    "features": "Features",
+    "products": "Products",
+    "solutions": "Solutions",
     "pricing": "Pricing",
-    "about": "About",
-    "contact": "Contact",
-    "getStarted": "Get Started"
+    "support": "Support",
+    "about": "About Us",
+    "getStarted": "Get Started",
+    "login": "Login",
+    "subProducts": {
+      "localPayment": "Local Payment",
+      "disbursement": "Disbursement",
+      "merchantPlatform": "Merchant Platform",
+      "paymentMethod": "Payment Methods"
+    },
+    "subSolutions": {
+      "localLife": "Local Life",
+      "logistics": "Logistics",
+      "gaming": "Gaming",
+      "fintech": "Fintech",
+      "retail": "Retail",
+      "crossBorder": "Cross Border"
+    },
+    "subAbout": {
+      "company": "Company",
+      "consult": "Consult Now"
+    }
   },
   "hero": {
     "title": "Global Payments Made Simple",
@@ -14,6 +34,55 @@
     "cta": "Start Sending Now",
     "secondaryCta": "Learn More",
     "trusted": "Trusted by"
+  },
+  "home": {
+    "hero": {
+      "title": "Trusted Local Payment Service Expert",
+      "subtitle": "PayCools - Your Local Payment Solution Expert"
+    },
+    "licenses": {
+      "title": "Fully Licensed, Direct Local Connection",
+      "description": "In Southeast Asia, we hold official licenses and provide secure, efficient, and legal protection for every transaction with our compliant qualifications, allowing your business to collect and pay with confidence wherever you are"
+    },
+    "partners": {
+      "title": "Our Partners"
+    },
+    "services": {
+      "title": "Global Payment Solutions, Localized Service!",
+      "subtitle": "The preferred choice for convenient payment partners in Southeast Asia! Holding overseas payment licenses to provide users with a rich payment experience",
+      "local": {
+        "title": "Localized Payment, Free Account Opening",
+        "description": "Localized payment transactions, lower fees, faster and more efficient"
+      },
+      "channels": {
+        "title": "Multiple Payment Channels, High Success Rate",
+        "description": "Support for multiple payment channels including cross-bank, payment centers, e-wallets, and QR code payments"
+      },
+      "cost": {
+        "title": "Local Settlement, More Cost-Effective",
+        "description": "Local settlement makes transaction fees more cost-effective"
+      },
+      "support": {
+        "title": "24/7 Self-Service Query, Lifetime One-on-One Service",
+        "description": "Personalized VIP support from account opening to launch, 24-hour access to transaction information"
+      }
+    },
+    "strategic": {
+      "title": "PayCools Strategic Partnership Projects",
+      "description": "PayCools has become a global payment strategic partner of J&T Express and provides payment solutions for the Philippines Securities and Exchange Commission and Bataan Provincial Government, which have been launched and are in operation",
+      "jt": {
+        "title": "J&T Express Global Payment Strategic Partnership",
+        "description": "Providing global payment solutions for J&T Express to support its rapid expansion in Southeast Asia"
+      },
+      "gov": {
+        "title": "Philippines Government Payment Partnership Project",
+        "description": "Providing payment solutions for the Philippines Securities and Exchange Commission and Bataan Provincial Government"
+      }
+    },
+    "cta": {
+      "title": "One-Stop Payment Service Expert",
+      "description": "Open an account for free and start your convenient payment journey now"
+    }
   },
   "features": {
     "title": "Why Choose OkoPay",

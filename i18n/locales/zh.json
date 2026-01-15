@@ -1,11 +1,31 @@
 {
   "nav": {
     "home": "首页",
-    "features": "功能",
-    "pricing": "价格",
-    "about": "关于",
-    "contact": "联系",
-    "getStarted": "立即开始"
+    "products": "产品中心",
+    "solutions": "解决方案",
+    "pricing": "产品报价",
+    "support": "支持中心",
+    "about": "关于我们",
+    "getStarted": "立即咨询",
+    "login": "登录",
+    "subProducts": {
+      "localPayment": "本地收单",
+      "disbursement": "本地代付",
+      "merchantPlatform": "商户管理平台",
+      "paymentMethod": "支付方式"
+    },
+    "subSolutions": {
+      "localLife": "本地生活",
+      "logistics": "物流快递",
+      "gaming": "游戏行业",
+      "fintech": "金融科技",
+      "retail": "零售行业",
+      "crossBorder": "跨境贸易"
+    },
+    "subAbout": {
+      "company": "公司介绍",
+      "consult": "立即咨询"
+    }
   },
   "hero": {
     "title": "全球支付，化繁为简",
@@ -14,6 +34,55 @@
     "cta": "立即汇款",
     "secondaryCta": "了解更多",
     "trusted": "信赖我们的"
+  },
+  "home": {
+    "hero": {
+      "title": "值得信赖的本地支付服务专家",
+      "subtitle": "PayCools - 您的本地支付解决方案专家 - 贝酷科技"
+    },
+    "licenses": {
+      "title": "牌照齐全 本地直连",
+      "description": "在东南亚，我们持有官方牌照，凭借合规资质为每笔交易提供安全、高效、合法的保障，让您的企业无论身在何处都能放心收付款"
+    },
+    "partners": {
+      "title": "合作伙伴"
+    },
+    "services": {
+      "title": "全球支付方案，本地化服务！",
+      "subtitle": "东南亚便捷支付伙伴合作首选！持有海外支付牌照，为用户提供丰富的支付体验",
+      "local": {
+        "title": "支付本地化，0费用开户",
+        "description": "本地化支付交易，费用低更快捷高效"
+      },
+      "channels": {
+        "title": "多元支付渠道，成功率高",
+        "description": "支持跨银行、支付中心、电子钱包和二维码支付的多种支付渠道"
+      },
+      "cost": {
+        "title": "本地结算，更具成本效益",
+        "description": "本地结算，交易费用更具成本效益"
+      },
+      "support": {
+        "title": "24/7自助查询，终身一对一服务",
+        "description": "个性化 VIP 支持从开户到上线，24 小时访问交易信息"
+      }
+    },
+    "strategic": {
+      "title": "PayCools 战略合作项目",
+      "description": "PayCools已成为极兔全球支付战略合作伙伴，并为菲律宾证券交易委员会及巴丹省政府提供支付解决方案并已上线运营",
+      "jt": {
+        "title": "极兔速递全球支付战略合作",
+        "description": "为极兔速递提供全球支付解决方案，支持其业务在东南亚的快速扩张"
+      },
+      "gov": {
+        "title": "菲律宾政府支付合作项目",
+        "description": "为菲律宾证券交易委员会及巴丹省政府提供支付解决方案"
+      }
+    },
+    "cta": {
+      "title": "一站式支付服务专家",
+      "description": "免费开通账号，立即开启便捷的支付之旅"
+    }
   },
   "features": {
     "title": "为什么选择 OkoPay",

@@ -14,7 +14,7 @@ const translations: Record<Locale, Translations> = {
 
 interface I18nContextType {
   locale: Locale;
-  t: Translations;
+  t: (key: string) => string;
   setLocale: (locale: Locale) => void;
 }
 
@@ -35,8 +35,23 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('locale', newLocale);
   };
 
+  const t = (key: string): string => {
+    const keys = key.split('.');
+    let value: any = translations[locale];
+    
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        return key; // Return key if translation not found
+      }
+    }
+    
+    return typeof value === 'string' ? value : key;
+  };
+
   return (
-    <I18nContext.Provider value={{ locale, t: translations[locale], setLocale }}>
+    <I18nContext.Provider value={{ locale, t, setLocale }}>
       {children}
     </I18nContext.Provider>
   );
