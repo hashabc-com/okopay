@@ -129,55 +129,6 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
-
-      {/* Strategic Cooperation */}
-      <section className="py-16 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">
-              战略合作项目
-            </h2>
-            <p className="text-lg text-slate-600">
-              OkoPay已成为多家知名企业的战略合作伙伴
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">极兔速递全球支付战略合作</h3>
-              <p className="text-primary-50 mb-4">
-                为极兔速递提供全球支付解决方案，覆盖多个国家和地区的支付服务
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">菲律宾政府支付合作项目</h3>
-              <p className="text-green-50 mb-4">
-                为菲律宾证券交易委员会及巴丹省政府提供支付解决方案并已上线运营
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-primary-500 to-primary-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-heading font-bold text-white mb-4">
-            一站式支付服务专家
-          </h2>
-          <p className="text-xl text-primary-50 mb-8">
-            免费开通账号，立即开启便捷的支付之旅
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex px-8 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-slate-50 transition-all duration-200 shadow-md hover:shadow-lg"
-          >
-            立即咨询
-          </a>
-        </div>
-      </section>
-
       <Footer />
     </main>
   );

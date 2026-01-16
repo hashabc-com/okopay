@@ -145,7 +145,7 @@ export default function RetailPage() {
                   便利店
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  PayCools通过专门支付解决方案简化了便利店的交易和财务结算
+                  OkoPay通过专门支付解决方案简化了便利店的交易和财务结算
                 </p>
               </div>
 
@@ -163,7 +163,7 @@ export default function RetailPage() {
                   市场
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  PayCools不断简化支付流程，以提高商家和客户的支付便利性和高效性
+                  OkoPay不断简化支付流程，以提高商家和客户的支付便利性和高效性
                 </p>
               </div>
 

@@ -61,7 +61,7 @@ export default function MerchantPlatformPage() {
                 让资金运用<span className="text-blue-600">更灵活</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                PayCools
+                OkoPay
                 利用智能数据工具合理优化商户资金使用运营方案，适应业务需求，高效配置，提升整体财务管理及运营。
               </p>
             </div>
@@ -184,7 +184,7 @@ export default function MerchantPlatformPage() {
                 <span className="text-blue-600">商户入驻</span> 合作流程
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                PayCools通过清晰高效的结算流程确保与商家的金融交易顺利进行，提高可靠性和满意度
+                OkoPay通过清晰高效的结算流程确保与商家的金融交易顺利进行，提高可靠性和满意度
               </p>
             </div>
             <div className="relative w-full h-[320px] md:h-[420px] lg:h-[480px]">

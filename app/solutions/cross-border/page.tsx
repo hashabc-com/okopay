@@ -42,7 +42,7 @@ export default function CrossBorderPage() {
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">为跨境贸易</h2>
             <h3 className="text-3xl font-heading font-bold text-slate-900 mb-6">从业者提供一站式跨境收付款解决方案</h3>
             <p className="text-lg text-slate-600 max-w-4xl">
-              PayCools提供一站式金融科技支付解决方案，整合数字金融支付，高效流程，安全可靠。通过统一API调用，细致数据分析，确保安全、创新、全球化的支付体验，提升用户满意度，助力企业发展。
+              OkoPay提供一站式金融科技支付解决方案，整合数字金融支付，高效流程，安全可靠。通过统一API调用，细致数据分析，确保安全、创新、全球化的支付体验，提升用户满意度，助力企业发展。
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function CrossBorderPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">一键打通本土收款渠道</h3>
               <p className="text-slate-600">
-                PayCools提供先进的支付系统，提供多样选择，满足不同消费者的支付需求。集成线上线下的交易形式，商户可迅速开展营收业务。
+                OkoPay提供先进的支付系统，提供多样选择，满足不同消费者的支付需求。集成线上线下的交易形式，商户可迅速开展营收业务。
               </p>
             </div>
 
@@ -79,7 +79,7 @@ export default function CrossBorderPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">结算更快 费用好省</h3>
               <p className="text-slate-600">
-                PayCools 系统可以让跨境零售行业伙伴们在当天把款项提领到合作的银行中，免去传统银行或机构的 T+5 的困扰。
+                OkoPay 系统可以让跨境零售行业伙伴们在当天把款项提领到合作的银行中，免去传统银行或机构的 T+5 的困扰。
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function CrossBorderPage() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">资金安全有保障</h3>
               <p className="text-slate-600">
-                PayCools 在业务开展的地区均有齐全的金融或支付牌照，为跨境零售行业伙伴们安全合规的收付款环境，加上强大的法律团队配合，确保资金的安全性。
+                OkoPay 在业务开展的地区均有齐全的金融或支付牌照，为跨境零售行业伙伴们安全合规的收付款环境，加上强大的法律团队配合，确保资金的安全性。
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function CrossBorderPage() {
           <div className="max-w-3xl">
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-6">本地支付促进跨境贸易</h2>
             <p className="text-lg text-slate-700 leading-relaxed">
-              PayCools为跨境电子商务合作伙伴量身定制安全的全球支付体验，确保遵守当地金融许可证法律，并确保商户资金的安全。
+              OkoPay为跨境电子商务合作伙伴量身定制安全的全球支付体验，确保遵守当地金融许可证法律，并确保商户资金的安全。
             </p>
           </div>
         </div>

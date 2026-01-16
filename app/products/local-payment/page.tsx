@@ -14,17 +14,17 @@ export default function LocalPaymentPage() {
       name: "货到付款",
       icon: "📦",
       description:
-        "PayCools已经在菲律宾、印尼、泰国、马来与本地银行、持牌机构合作货币兑换业务，为PayCools体系内的收单商户提供安全、合规、灵活的货币兑换服务",
+        "OkoPay已经在菲律宾、印尼、泰国、马来与本地银行、持牌机构合作货币兑换业务，为OkoPay体系内的收单商户提供安全、合规、灵活的货币兑换服务",
     },
     {
       name: "旅行支付",
       icon: "✈️",
-      description: "PayCools 可以帮助您集成更安全的旅游行业支付解决方案",
+      description: "OkoPay 可以帮助您集成更安全的旅游行业支付解决方案",
     },
     {
       name: "酒店预订",
       icon: "🏨",
-      description: "PayCools支持在线酒店支付系统整合，用户随时随地可下单",
+      description: "OkoPay支持在线酒店支付系统整合，用户随时随地可下单",
     },
     {
       name: "餐厅点餐",
