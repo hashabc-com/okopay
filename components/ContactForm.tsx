@@ -97,13 +97,13 @@ export default function ContactForm() {
     e.preventDefault();
     if (validate()) {
       console.log('Form submitted:', formData);
-      alert('提交成功！我们将尽快联系您。');
+      alert('提交成功！我们将尽快联系您');
       // Reset form or redirect
     }
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto border border-blue-50">
+    <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto border border-primary-50">
       <h2 className="text-3xl font-bold text-slate-900 mb-8">
         立即开启高效支付之旅！
       </h2>
@@ -113,7 +113,7 @@ export default function ContactForm() {
           {/* 姓名 */}
           <div className="space-y-2">
             <label className="block text-sm font-bold text-slate-900">
-              姓名<span className="text-blue-600">*</span>
+              姓名<span className="text-primary-600">*</span>
             </label>
             <input
               type="text"
@@ -123,14 +123,14 @@ export default function ContactForm() {
               placeholder="请填写您的姓名"
               className={`w-full px-4 py-3 rounded-lg border ${
                 errors.name ? 'border-red-500' : 'border-slate-200'
-              } focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all`}
+              } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
             />
           </div>
 
           {/* 联系邮箱 */}
           <div className="space-y-2">
             <label className="block text-sm font-bold text-slate-900">
-              联系邮箱<span className="text-blue-600">*</span>
+              联系邮箱<span className="text-primary-600">*</span>
             </label>
             <input
               type="email"
@@ -140,7 +140,7 @@ export default function ContactForm() {
               placeholder="请填写您的联系邮箱"
               className={`w-full px-4 py-3 rounded-lg border ${
                 errors.email ? 'border-red-500' : 'border-slate-200'
-              } focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all`}
+              } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
             />
           </div>
         </div>
@@ -148,14 +148,14 @@ export default function ContactForm() {
         {/* 联系号码 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            联系号码<span className="text-blue-600">*</span>
+            联系号码<span className="text-primary-600">*</span>
           </label>
           <div className="flex">
             <select
               name="phonePrefix"
               value={formData.phonePrefix}
               onChange={handleInputChange}
-              className="px-4 py-3 rounded-l-lg border border-r-0 border-slate-200 bg-slate-50 text-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all w-32"
+              className="px-4 py-3 rounded-l-lg border border-r-0 border-slate-200 bg-slate-50 text-slate-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all w-32"
             >
               {PHONE_PREFIXES.map((prefix) => (
                 <option key={prefix.code} value={prefix.code}>
@@ -171,7 +171,7 @@ export default function ContactForm() {
               placeholder="请填写您的联系号码"
               className={`flex-1 px-4 py-3 rounded-r-lg border ${
                 errors.phone ? 'border-red-500' : 'border-slate-200'
-              } focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all`}
+              } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
             />
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function ContactForm() {
         {/* 国家或地区 */}
         <div className="space-y-3">
           <label className="block text-sm font-bold text-slate-900">
-            国家或地区<span className="text-blue-600">*</span>
+            国家或地区<span className="text-primary-600">*</span>
           </label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {COUNTRIES.map((country) => (
@@ -192,13 +192,13 @@ export default function ContactForm() {
                     type="checkbox"
                     checked={formData.countries.includes(country.label)}
                     onChange={() => handleCountryToggle(country.label)}
-                    className="peer w-5 h-5 border-2 border-slate-300 rounded focus:ring-blue-500 text-blue-600 cursor-pointer transition-colors checked:bg-blue-600 checked:border-blue-600"
+                    className="peer w-5 h-5 border-2 border-slate-300 rounded focus:ring-primary-500 text-primary-600 cursor-pointer transition-colors checked:bg-primary-600 checked:border-primary-600"
                   />
                   {/* Custom Checkbox Style if needed, but standard with accent-color is often enough. 
                       Tailwind's form plugin handles this well, but here we rely on basic classes. 
                   */}
                 </div>
-                <span className="flex items-center text-slate-700 group-hover:text-blue-600 transition-colors">
+                <span className="flex items-center text-slate-700 group-hover:text-primary-600 transition-colors">
                   <img 
                     src={country.flag} 
                     alt={country.label}
@@ -219,7 +219,7 @@ export default function ContactForm() {
         {/* 公司名称 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            公司名称<span className="text-blue-600">*</span>
+            公司名称<span className="text-primary-600">*</span>
           </label>
           <input
             type="text"
@@ -229,14 +229,14 @@ export default function ContactForm() {
             placeholder="请填写您的公司名称"
             className={`w-full px-4 py-3 rounded-lg border ${
               errors.company ? 'border-red-500' : 'border-slate-200'
-            } focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all`}
+            } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
           />
         </div>
 
         {/* 咨询内容 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            咨询内容<span className="text-blue-600">*</span>
+            咨询内容<span className="text-primary-600">*</span>
           </label>
           <div className="relative">
             <select
@@ -245,7 +245,7 @@ export default function ContactForm() {
               onChange={handleInputChange}
               className={`w-full px-4 py-3 rounded-lg border appearance-none bg-white ${
                 errors.inquiryType ? 'border-red-500 text-red-500' : 'border-slate-200 text-slate-900'
-              } focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all`}
+              } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
             >
               <option value="" disabled>请选择</option>
               {INQUIRY_TYPES.map((type) => (
@@ -277,9 +277,9 @@ export default function ContactForm() {
                 }
               }}
               rows={4}
-              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all resize-none"
             />
-            <div className="absolute bottom-3 right-4 text-xs text-blue-400">
+            <div className="absolute bottom-3 right-4 text-xs text-primary-400">
               {formData.note.length}/200
             </div>
           </div>
@@ -296,3 +296,4 @@ export default function ContactForm() {
     </div>
   );
 }
+

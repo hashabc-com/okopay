@@ -60,7 +60,7 @@ export default function LocalLifePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Card 1 - Payment Methods */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
@@ -135,7 +135,7 @@ export default function LocalLifePage() {
                   Swifood在线点餐和支付系统
                 </h3>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                  为本地餐饮提供完整的在线点餐和支付解决方案，支持多种支付方式，提升用户体验，增加营业额
+                  为本地餐饮提供完整的在线点餐和支付解决方案，支持多种支付方式，提升用户体验，增加营业额。
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
@@ -152,7 +152,7 @@ export default function LocalLifePage() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-lg">在线支付，快速结账</span>
+                    <span className="text-slate-700 text-lg">简单易用，提升营业效率</span>
                   </li>
                   <li className="flex items-start">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mt-0.5 mr-3">
@@ -160,7 +160,7 @@ export default function LocalLifePage() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-lg">会员系统，提升复购率</span>
+                    <span className="text-slate-700 text-lg">简单易用，提升营业效率</span>
                   </li>
                 </ul>
               </div>
@@ -174,24 +174,24 @@ export default function LocalLifePage() {
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
-                      <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mt-0.5 mr-3">
+                      <svg className="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
                     <span className="text-slate-700 text-lg">多种支付方式，满足不同需求</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
-                      <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mt-0.5 mr-3">
+                      <svg className="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-lg">实时到账，资金安全</span>
+                    <span className="text-slate-700 text-lg">在线支付，快速结算</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5 mr-3">
-                      <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mt-0.5 mr-3">
+                      <svg className="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
@@ -228,3 +228,5 @@ export default function LocalLifePage() {
     </main>
   );
 }
+
+

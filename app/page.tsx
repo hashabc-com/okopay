@@ -6,8 +6,6 @@ import Image from "next/image";
 import { useI18n } from "@/i18n/i18n-context";
 
 export default function Home() {
-  const { t } = useI18n();
-
   const licenses = [
     { name: "PJP3", icon: "/home/icon1.png" },
     { name: "VASP", icon: "/home/icon2.png" },
@@ -40,27 +38,27 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[600px] bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50 overflow-hidden">
-        <div className="container mx-auto px-6 py-30">
+      <section className="relative min-h-[600px] bg-gradient-to-br from-primary-50 via-sky-50 to-blue-50 overflow-hidden">
+        <div className="container mx-auto px-6 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <div className="space-y-8 animate-fade-in">
+              <h1 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
                 值得信赖的本地支付服务专家
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-slate-600 leading-relaxed">
                 OkoPay - 您的本地支付解决方案专家
               </p>
               <Link
                 href="/about/consult"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 立即咨询
               </Link>
             </div>
 
             {/* Right Image */}
-            <div className="relative h-[400px] lg:h-[500px]">
+            <div className="relative h-[400px] lg:h-[500px] animate-fade-in">
               <Image
                 src="/home/img1.webp"
                 alt="Hero Image"
@@ -74,23 +72,14 @@ export default function Home() {
       </section>
 
       {/* Licenses Section */}
-      <section className="relative py-30 from-slate-100 via-blue-50 to-indigo-50 text-gray-900 overflow-hidden">
-        {/* <div 
-          className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{
-            backgroundImage: 'url(/home/fully_legally_bg.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        /> */}
+      <section className="relative py-32 from-slate-50 via-blue-50 to-indigo-50 text-slate-900 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-blue-600">牌照齐全</span>{" "}
-              <span className="text-blue-600">本地</span>直连
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+              <span className="text-primary-600">牌照齐全</span>{" "}
+              <span className="text-primary-600">本地</span>直连
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               在东南亚，我们拥有官方牌照，凭借合规资质为每笔交易提供安全、高效、合法的保障，让您的企业无论身在何处都能放心收付款
             </p>
           </div>
@@ -99,9 +88,9 @@ export default function Home() {
             {licenses.map((license, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300"
+                className="bg-white rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-200 border-2 border-primary-100 hover:border-primary-300 cursor-pointer group"
               >
-                <div className="relative h-20 mb-4">
+                <div className="relative h-20 mb-4 transition-transform duration-200 group-hover:scale-105">
                   <Image
                     src={license.icon}
                     alt={license.name}
@@ -109,7 +98,7 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm leading-tight">
+                <h3 className="font-semibold text-slate-900 text-sm leading-tight">
                   {license.name}
                 </h3>
               </div>
@@ -119,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Services Section with Partners Marquee */}
-      <section className="py-30 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5 pointer-events-none"
           style={{
@@ -131,14 +120,14 @@ export default function Home() {
         />
         <div className="container mx-auto px-6 relative z-10">
           {/* Partners Marquee with fade effect */}
-          <div className="mb-16 relative">
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white to-transparent z-10" />
+          <div className="mb-20 relative">
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
             <div className="overflow-hidden">
               <div className="flex animate-scroll">
                 {[...partners, ...partners].map((partner, index) => (
                   <div key={index} className="flex-shrink-0 w-32 mx-6">
-                    <div className="relative h-16 grayscale hover:grayscale-0 transition-all duration-300">
+                    <div className="relative h-16 grayscale hover:grayscale-0 transition-all duration-200 opacity-70 hover:opacity-100 cursor-pointer">
                       <Image
                         src={partner}
                         alt={`Partner ${index}`}
@@ -155,20 +144,20 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
             <div className="space-y-8">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                <span className="text-blue-600">全球</span> 支付方案，
+              <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 leading-tight">
+                <span className="text-primary-600">全球</span> 支付方案
                 <br />
-                <span className="text-blue-600">本地化</span> 服务！
+                <span className="text-primary-600">本地</span> 服务
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-slate-600 leading-relaxed">
                 东南亚便捷支付伙伴合作首选！持有海外支付牌照，为用户提供丰富的支付体验
               </p>
             </div>
 
             {/* Right Cards Grid */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-blue-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-sky-600 rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-primary-100 hover:border-primary-200 cursor-pointer group">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -183,17 +172,17 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
                   支付本地化，0费用开户
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  <span className="text-blue-600 font-semibold">本地化</span>
+                <p className="text-slate-600 leading-relaxed">
+                  <span className="text-primary-600 font-semibold">本地化</span>
                   支付交易，费用低更快捷高效
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-blue-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-700 rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-primary-100 hover:border-primary-200 cursor-pointer group">
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -208,17 +197,17 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
                   多元支付渠道，成功率高
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  <span className="text-blue-600 font-semibold">支持</span>
+                <p className="text-slate-600 leading-relaxed">
+                  <span className="text-primary-600 font-semibold">支持</span>
                   跨银行、支付中心、电子钱包和二维码支付的多种支付渠道。
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-blue-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-primary-100 hover:border-primary-200 cursor-pointer group">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -233,18 +222,18 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
                   本地结算，更具成本效益
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   支持跨银行、支付中心、电子钱包和二维码等形式的多种支付渠道。
-                  <span className="text-blue-600 font-semibold">本地结算</span>
+                  <span className="text-primary-600 font-semibold">本地结算</span>
                   ，交易费用更具成本效益。
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-blue-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-sky-600 rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-200 border border-primary-100 hover:border-primary-200 cursor-pointer group">
+                <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -259,11 +248,11 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
                   24/7自助查询，终身一对一服务
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  <span className="text-blue-600 font-semibold">个性化</span>{" "}
+                <p className="text-slate-600 leading-relaxed">
+                  <span className="text-primary-600 font-semibold">个性化</span>{" "}
                   VIP 支持从开户到上线，24 小时访问交易信息。
                 </p>
               </div>
@@ -293,3 +282,5 @@ export default function Home() {
     </main>
   );
 }
+
+

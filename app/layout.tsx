@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Space_Grotesk } from 'next/font/google';
+import { Open_Sans, Poppins } from 'next/font/google';
 import './globals.css';
 import { I18nProvider } from '@/i18n/i18n-context';
 
-const dmSans = DM_Sans({
+const openSans = Open_Sans({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
-  weight: ['400', '500', '700'],
+  variable: '--font-open-sans',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-poppins',
   weight: ['400', '500', '600', '700'],
 });
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${dmSans.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${openSans.variable} ${poppins.variable} font-sans antialiased`}>
         <I18nProvider>
           {children}
         </I18nProvider>
@@ -41,3 +41,4 @@ export default function RootLayout({
     </html>
   );
 }
+

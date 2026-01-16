@@ -42,7 +42,7 @@ export default function Footer() {
             <span className="text-2xl font-heading font-bold text-primary-400 mb-4 block">
               OkoPay
             </span>
-            <p className="text-slate-400 mb-6">
+            <p className="text-slate-400 mb-6 leading-relaxed">
               {t('footer.description')}
             </p>
             {/* Social links */}
@@ -55,7 +55,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition-colors duration-200 cursor-pointer"
+                  className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary-600 transition-all duration-200 cursor-pointer hover:scale-110"
                   aria-label={social.label}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

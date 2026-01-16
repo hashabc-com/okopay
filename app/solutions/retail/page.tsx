@@ -19,7 +19,7 @@ export default function RetailPage() {
                 零售业<br />一体化支付解决方案
               </h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                OkoPay 致力助推东南亚零售，构建一体化支付解决方案，确保安全与便捷。借创新科技，提供可靠支付，创造高效安全交易体验，加强零售行业生态稳健发展
+                OkoPay 致力助推东南亚零售，构建一体化支付解决方案，确保安全与便捷。借创新科技，提供可靠支付，创造高效安全交易体验，加强零售行业生态稳健发展。
               </p>
               <a
                 href="#contact"
@@ -55,14 +55,14 @@ export default function RetailPage() {
               东南亚零售行业，打造更安全易操作的支付解决方案
             </p>
             <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              OkoPay整合先进技术，为零售商提供东南亚主流支付，保障安全，简化操作。智能支付系统提升用户体验，实现便捷购物。持续优化防欺诈，确保交易安全。致力于与零售商共同打造数字支付新标准，促进业务增长
+              OkoPay整合先进技术，为零售商提供东南亚主流支付，保障安全，简化操作。智能支付系统提升用户体验，实现便捷购物。持续优化防欺诈，确保交易安全。致力于与零售商共同打造数字支付新标准，促进业务增长。
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Card 1 - One-stop Payment */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
@@ -109,7 +109,7 @@ export default function RetailPage() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">多种支付终端</h3>
               <p className="text-slate-600 leading-relaxed">
-                支付本地化,满足当地多种支付终端，均适配手机、PC、平板等设备，可实现线上线下交易模式。
+                支付本地化，满足当地多种支付终端，均适配手机、PC、平板等设备，可实现线上线下交易模式。
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function RetailPage() {
             <div className="space-y-6">
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-slate-100">
                 <h3 className="text-2xl font-bold text-primary-600 mb-4">
-                  加盟店
+                  加盟�?
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
                   我们为加盟店定制支付解决方案，确保交易顺畅并提高财务管理运营效率
@@ -195,3 +195,4 @@ export default function RetailPage() {
     </main>
   );
 }
+

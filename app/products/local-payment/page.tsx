@@ -41,7 +41,7 @@ export default function LocalPaymentPage() {
       name: "网上送餐",
       icon: "🍔",
       description:
-        "在线订购服务，使用户能够通过无缝的数字平台方便地订购和接收他们最喜欢的餐食",
+        "在线订购服务，使用户能够通过无缝的数字平台方便地订购和接收他们最喜欢的餐点",
     },
   ];
 
@@ -60,7 +60,7 @@ export default function LocalPaymentPage() {
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
                 本地收单
               </h1>
-              <p className="text-2xl text-blue-600 font-semibold mb-6">
+              <p className="text-2xl text-primary-600 font-semibold mb-6">
                 极速收单，资金到账更快
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -68,7 +68,7 @@ export default function LocalPaymentPage() {
               </p>
               <a
                 href="#contact"
-                className="inline-flex px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 立即咨询
               </a>
@@ -96,15 +96,14 @@ export default function LocalPaymentPage() {
               更多的应用场景
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              OkoPay提供网页/手机端
-              付款界面，企业主无需开发即可高效整合适配不同渠道（例如QRcode、网上银行、柜台银行、支付中心和电子钱包）更方便地接受付款。
+              OkoPay提供网页/手机端付款界面，企业主无需开发即可高效整合适配不同渠道（例如QRcode、网上银行、柜台银行、支付中心和电子钱包）更方便地接受付款。
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Payment Link */}
-            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-primary-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -128,8 +127,8 @@ export default function LocalPaymentPage() {
             </div>
 
             {/* Online Payment */}
-            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-primary-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -153,8 +152,8 @@ export default function LocalPaymentPage() {
             </div>
 
             {/* API Integration */}
-            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-primary-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -202,7 +201,7 @@ export default function LocalPaymentPage() {
                   onClick={() => toggleExpand(index)}
                 >
                   <div className="flex items-center gap-3 p-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-2xl">
                       {scenario.icon}
                     </div>
                     <div className="flex-1">
@@ -265,3 +264,5 @@ export default function LocalPaymentPage() {
     </main>
   );
 }
+
+

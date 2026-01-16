@@ -18,11 +18,11 @@ export default function Navbar() {
   return (
     <nav className="fixed top-4 left-4 right-4 z-50 animate-slide-down">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="backdrop-blur-md bg-white/80 border border-blue-200 rounded-2xl shadow-lg">
+        <div className="backdrop-blur-md bg-white/90 border border-primary-200 rounded-2xl shadow-lg">
           <div className="flex items-center justify-between h-16 px-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-heading font-bold text-blue-600">
+            <Link href="/" className="flex items-center cursor-pointer group">
+              <span className="text-2xl font-heading font-bold text-primary-600 group-hover:text-primary-700 transition-colors duration-200">
                 OkoPay
               </span>
             </Link>
@@ -31,17 +31,17 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-6">
               <Link
                 href="/"
-                className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium"
+                className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium cursor-pointer"
               >
                 {t("nav.home")}
               </Link>
 
               {/* Products Dropdown */}
               <div className="relative group">
-                <button className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium flex items-center">
+                <button className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium flex items-center cursor-pointer" aria-haspopup="true" aria-expanded="false">
                   {t("nav.products")}
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -54,28 +54,32 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-xl border border-blue-200 py-2">
+                <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-xl border border-primary-100 py-2" role="menu">
                   <Link
                     href="/products/local-payment"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subProducts.localPayment")}
                   </Link>
                   <Link
                     href="/products/disbursement"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subProducts.disbursement")}
                   </Link>
                   <Link
                     href="/products/merchant-platform"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subProducts.merchantPlatform")}
                   </Link>
                   <Link
                     href="/products/payment-method"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subProducts.paymentMethod")}
                   </Link>
@@ -84,10 +88,10 @@ export default function Navbar() {
 
               {/* Solutions Dropdown */}
               <div className="relative group">
-                <button className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium flex items-center">
+                <button className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium flex items-center cursor-pointer" aria-haspopup="true" aria-expanded="false">
                   {t("nav.solutions")}
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -100,40 +104,46 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-xl border border-blue-200 py-2">
+                <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-xl border border-primary-100 py-2" role="menu">
                   <Link
                     href="/solutions/local-life"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.localLife")}
                   </Link>
                   <Link
                     href="/solutions/logistics"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.logistics")}
                   </Link>
                   <Link
                     href="/solutions/gaming"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.gaming")}
                   </Link>
                   <Link
                     href="/solutions/fintech"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.fintech")}
                   </Link>
                   <Link
                     href="/solutions/retail"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.retail")}
                   </Link>
                   <Link
                     href="/solutions/cross-border"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subSolutions.crossBorder")}
                   </Link>
@@ -142,24 +152,24 @@ export default function Navbar() {
 
               <Link
                 href="/pricing"
-                className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium"
+                className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium cursor-pointer"
               >
                 {t("nav.pricing")}
               </Link>
 
               {/* <Link
                 href="/support"
-                className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium"
+                className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium cursor-pointer"
               >
                 {t("nav.support")}
               </Link> */}
 
               {/* About Dropdown */}
               <div className="relative group">
-                <button className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium flex items-center">
+                <button className="text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium flex items-center cursor-pointer" aria-haspopup="true" aria-expanded="false">
                   {t("nav.about")}
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -172,16 +182,18 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-xl border border-blue-200 py-2">
+                <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-xl border border-primary-100 py-2" role="menu">
                   <Link
                     href="/about/company"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subAbout.company")}
                   </Link>
                   <Link
                     href="/about/consult"
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-500"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
                   >
                     {t("nav.subAbout.consult")}
                   </Link>
@@ -191,22 +203,22 @@ export default function Navbar() {
 
             {/* CTA & Language Switcher */}
             <div className="flex items-center space-x-3">
-              <Link
+              {/* <Link
                 href="/login"
-                className="hidden lg:inline-flex px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors duration-200"
+                className="hidden lg:inline-flex px-4 py-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition-colors duration-200 cursor-pointer"
               >
                 {t("nav.login")}
-              </Link>
+              </Link> */}
               <button
                 onClick={toggleLocale}
-                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-500 transition-colors duration-200 cursor-pointer"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all duration-200 cursor-pointer"
                 aria-label="Switch language"
               >
                 {locale === "en" ? "中文" : "EN"}
               </button>
               <a
                 href="#get-started"
-                className="hidden lg:inline-flex px-6 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
+                className="hidden lg:inline-flex px-6 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium rounded-lg hover:from-primary-700 hover:to-primary-800 transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
               >
                 {t("nav.getStarted")}
               </a>

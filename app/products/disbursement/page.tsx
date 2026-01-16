@@ -49,7 +49,7 @@ export default function DisbursementPage() {
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
                 本地代付
               </h1>
-              <p className="text-2xl text-blue-600 font-semibold mb-6">
+              <p className="text-2xl text-primary-600 font-semibold mb-6">
                 极速打款，安全高效
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -57,7 +57,7 @@ export default function DisbursementPage() {
               </p>
               <a
                 href="#contact"
-                className="inline-flex px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 立即咨询
               </a>
@@ -93,7 +93,7 @@ export default function DisbursementPage() {
               {/* Collapsible Sections */}
               <div className="space-y-2">
                 {[
-                  { title: '支付渠道', content: '本地银行账户、电子钱包、实体便利店、当铺。' },
+                  { title: '支付渠道', content: '本地银行账户、电子钱包、实体便利店、当铺等' },
                   { title: '支付方式', content: '可以选择手动或API批量打款' },
                   { title: '小额代付', content: '支持金额、网络游戏、零售业和转账类型服务的小额代付' },
                   { title: '大额代付', content: '贸易支付、代发工资、企业转账' },
@@ -121,7 +121,7 @@ export default function DisbursementPage() {
                       onClick={() => setActiveTab(tab.id)}
                       className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                         activeTab === tab.id
-                          ? 'bg-blue-600 text-white shadow-md'
+                          ? 'bg-primary-600 text-white shadow-md'
                           : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                       }`}
                     >
@@ -132,12 +132,12 @@ export default function DisbursementPage() {
               </div>
 
               {/* Content Area */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-xl border border-blue-100">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-xl border border-primary-100">
                 {/* Bank Payment Section */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-semibold text-slate-900 mb-3">银行打款</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    我们与{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}当地多家当地银行建立直连合作关系，支持主流银行打款，资金安全打款成功率极高，费用低。
+                    我们与{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}当地多家当地银行建立直连合作关系，支持主流银行打款，资金安全打款成功率极高，费用低廉。
                   </p>
                   
                   {/* Bank Icons */}
@@ -204,14 +204,14 @@ export default function DisbursementPage() {
                       </>
                     )}
                   </div>
-                  <p className="text-sm text-blue-600 font-medium">更多支持...</p>
+                  <p className="text-sm text-primary-600 font-medium">更多支持...</p>
                 </div>
 
                 {/* E-Wallet Section */}
                 <div>
                   <h3 className="text-2xl font-semibold text-slate-900 mb-3">电子钱包</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    我们支持支付到{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}流行的电子钱包，满足客户的直接充值需求
+                    我们支持支付到{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}流行的电子钱包，满足客户的直接充值需求。
                   </p>
                   
                   {/* E-Wallet Icons */}
@@ -266,7 +266,7 @@ export default function DisbursementPage() {
                       </>
                     )}
                   </div>
-                  <p className="text-sm text-blue-600 font-medium">更多支持...</p>
+                  <p className="text-sm text-primary-600 font-medium">更多支持...</p>
                 </div>
               </div>
             </div>
@@ -289,8 +289,8 @@ export default function DisbursementPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Scenarios Cards */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
@@ -299,7 +299,7 @@ export default function DisbursementPage() {
                 <p className="text-slate-600 leading-relaxed">批量发放员工工资，提高财务处理效率</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -309,7 +309,7 @@ export default function DisbursementPage() {
                 <p className="text-slate-600 leading-relaxed">快速结算供应商款项，保持良好合作关系</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -319,7 +319,7 @@ export default function DisbursementPage() {
                 <p className="text-slate-600 leading-relaxed">处理商户交易退款，提升用户体验</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
                 <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -349,3 +349,4 @@ export default function DisbursementPage() {
     </main>
   );
 }
+

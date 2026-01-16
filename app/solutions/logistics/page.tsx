@@ -114,7 +114,7 @@ export default function LogisticsPage() {
                   包裹代收及支付解决方案
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  客户不在家时，通过发送支付链接完成在线支付，简化收款流程
+                  客户不在家时，通过发送支付链接完成在线支付，简化收款流�?
                 </p>
               </div>
 
@@ -164,3 +164,4 @@ export default function LogisticsPage() {
     </main>
   );
 }
+

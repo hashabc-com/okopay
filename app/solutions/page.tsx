@@ -16,7 +16,7 @@ export default function SolutionsIndexPage() {
       desc: '为物流行业提供高效的支付和代付服务',
       icon: '📦',
       link: '/solutions/logistics',
-      gradient: 'from-blue-400 to-blue-600'
+      gradient: 'from-primary-400 to-primary-600'
     },
     {
       title: '游戏行业',
@@ -87,3 +87,4 @@ export default function SolutionsIndexPage() {
     </main>
   );
 }
+

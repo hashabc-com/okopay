@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import ContactForm from "@/components/ContactForm";
 
 export default function PaymentMethodPage() {
   return (
@@ -20,14 +19,14 @@ export default function PaymentMethodPage() {
                 支付方式
               </h1>
               <h2 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-8 leading-tight">
-                <span className="text-blue-600">聚合</span> 多国家本地支付方式
+                <span className="text-primary-600">聚合</span> 多国家本地支付方式
               </h2>
               <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
                 我们采用统一支付API，支持多国家本地支付方式。为全球商户助力本地增收，提升用户支付体验。
               </p>
               <a
                 href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-primary-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 立即咨询
               </a>
@@ -77,13 +76,13 @@ export default function PaymentMethodPage() {
             <table className="min-w-full text-left">
               <thead className="bg-white border-b border-slate-100">
                 <tr>
-                  <th className="px-8 py-6 text-xl font-bold text-blue-600 tracking-wide">
+                  <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
                     支持国家
                   </th>
-                  <th className="px-8 py-6 text-xl font-bold text-blue-600 tracking-wide">
+                  <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
                     支付类型
                   </th>
-                  <th className="px-8 py-6 text-xl font-bold text-blue-600 tracking-wide">
+                  <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
                     支付渠道
                   </th>
                 </tr>
@@ -175,3 +174,4 @@ export default function PaymentMethodPage() {
     </main>
   );
 }
+

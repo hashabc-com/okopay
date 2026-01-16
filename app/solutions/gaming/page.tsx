@@ -62,14 +62,14 @@ export default function GamingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Card 1 - Multiple Payment Methods */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">多元支付方式</h3>
               <p className="text-slate-600 leading-relaxed">
-                本土游戏与本地最新支付技术相结合，多种支付方式为游戏发行商提供稳定可靠的支付服务，满足当地玩家多样化的支付需求，提升支付成功率
+                本土游戏与本地最新支付技术相结合，多种支付方式为游戏发行商提供稳定可靠的支付服务，满足当地玩家多样化的支付需求，提升支付成功率。
               </p>
             </div>
 
@@ -119,3 +119,4 @@ export default function GamingPage() {
     </main>
   );
 }
+

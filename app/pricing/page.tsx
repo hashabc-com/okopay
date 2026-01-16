@@ -18,7 +18,7 @@ export default function PricingPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-heading font-bold text-slate-900 mb-3">价格</h2>
-                <h3 className="text-2xl font-heading font-bold text-blue-600 mb-6">量身定制 价格方案</h3>
+                <h3 className="text-2xl font-heading font-bold text-primary-600 mb-6">量身定制 价格方案</h3>
                 <p className="text-slate-600 mb-8">
                   OkoPay 系于2021年成立的跨境收款及本地支付解决方案公司，专注于为客户提供定制化金融解决方案。其植根于新兴市场，服务地区以东南亚、拉美、中东为主。
                 </p>
@@ -27,7 +27,7 @@ export default function PricingPage() {
               <div className="space-y-20">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                       </svg>
@@ -41,7 +41,7 @@ export default function PricingPage() {
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                       </svg>
@@ -54,8 +54,8 @@ export default function PricingPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="flex-flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -80,3 +80,5 @@ export default function PricingPage() {
     </main>
   );
 }
+
+
