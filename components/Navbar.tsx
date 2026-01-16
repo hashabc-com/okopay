@@ -147,12 +147,12 @@ export default function Navbar() {
                 {t("nav.pricing")}
               </Link>
 
-              <Link
+              {/* <Link
                 href="/support"
                 className="text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium"
               >
                 {t("nav.support")}
-              </Link>
+              </Link> */}
 
               {/* About Dropdown */}
               <div className="relative group">

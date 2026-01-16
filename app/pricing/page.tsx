@@ -1,162 +1,81 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
+import Image from 'next/image';
 
 export default function PricingPage() {
   return (
     <main>
       <Navbar />
       
-      <section className="pt-32 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-heading font-bold text-slate-900 mb-6">产品报价</h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            透明的定价方案，灵活的收费模式，满足不同规模企业的需求
-          </p>
-        </div>
-      </section>
+      {/* Hero Section - Removed, content moved to Features section */}
 
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-          {/* Basic */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">基础版</h3>
-            <p className="text-slate-600 mb-6">适合初创企业和小型商户</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold text-slate-900">1.5%</span>
-              <span className="text-slate-600 ml-2">每笔交易</span>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">支持主流支付方式</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">T+1结算</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">基础技术支持</span>
-              </li>
-            </ul>
-            <a href="#contact" className="block w-full px-6 py-3 bg-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-300 transition-colors duration-200 text-center">
-              立即咨询
-            </a>
-          </div>
-
-          {/* Professional */}
-          <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl shadow-2xl p-8 transform scale-105 relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">推荐</span>
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">专业版</h3>
-            <p className="text-primary-100 mb-6">适合成长型企业</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold text-white">1.0%</span>
-              <span className="text-primary-100 ml-2">每笔交易</span>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white">所有支付方式</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white">T+0实时结算</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white">7x24专属客服</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white">数据分析报告</span>
-              </li>
-            </ul>
-            <a href="#contact" className="block w-full px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-slate-50 transition-colors duration-200 text-center">
-              立即咨询
-            </a>
-          </div>
-
-          {/* Enterprise */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">企业版</h3>
-            <p className="text-slate-600 mb-6">适合大型企业和高交易量商户</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold text-slate-900">定制</span>
-              <span className="text-slate-600 ml-2">方案</span>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">定制化费率</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">专属账户经理</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">定制化开发</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-slate-600">SLA服务保障</span>
-              </li>
-            </ul>
-            <a href="#contact" className="block w-full px-6 py-3 bg-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-300 transition-colors duration-200 text-center">
-              联系销售
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-slate-50">
+      {/* Features and Contact Form Section - Side by Side */}
+      <section className="py-36 px-4 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8 text-center">常见问题</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-slate-900 mb-2">是否有隐藏费用？</h3>
-              <p className="text-slate-600">没有任何隐藏费用，所有收费项目都透明公开。</p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Features */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-heading font-bold text-slate-900 mb-3">价格</h2>
+                <h3 className="text-2xl font-heading font-bold text-blue-600 mb-6">量身定制 价格方案</h3>
+                <p className="text-slate-600 mb-8">
+                  OkoPay 系于2021年成立的跨境收款及本地支付解决方案公司，专注于为客户提供定制化金融解决方案。其植根于新兴市场，服务地区以东南亚、拉美、中东为主。
+                </p>
+              </div>
+
+              <div className="space-y-20">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">免费接入，多国可用</h4>
+                    <p className="text-slate-600">一次接入多国可用，助力快速全球化业务</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">费率固定，灵活组合</h4>
+                    <p className="text-slate-600">价格公开透明，每一笔交易计费成本清晰明了</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">支付本地化，费用极低</h4>
+                    <p className="text-slate-600">全球支付方案最优定价，为您降本增效</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-slate-900 mb-2">如何申请降低费率？</h3>
-              <p className="text-slate-600">交易量达到一定规模后，可联系客服申请优惠费率。</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-slate-900 mb-2">支持哪些结算周期？</h3>
-              <p className="text-slate-600">支持T+0、T+1等多种结算周期，根据套餐而定。</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-slate-900 mb-2">如何升级套餐？</h3>
-              <p className="text-slate-600">随时可以升级套餐，联系客服即可办理。</p>
+
+            {/* Right: Contact Form */}
+            <div>
+              <ContactForm />
             </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </main>
   );

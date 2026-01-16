@@ -1,75 +1,162 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 export default function LogisticsPage() {
   return (
     <main>
       <Navbar />
       
-      <section className="pt-32 pb-16 px-4">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-heading font-bold text-slate-900 mb-6">物流快递</h1>
-              <p className="text-xl text-slate-600 mb-4">物流行业专业支付解决方案</p>
-              <p className="text-lg text-slate-500 mb-8">
-                为物流快递企业提供高效的支付和代付服务，支持货到付款、运费结算、司机代付等多种场景
+              <h1 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-6">
+                物流快递
+              </h1>
+              <h2 className="text-2xl lg:text-3xl text-slate-700 font-semibold mb-4">
+                物流快递全方位支付解决方案
+              </h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                OkoPay物流支付全方位解决方案，整合多元支付、高效流程和卓越安全技术，提升用户体验。与物流企业紧密合作，追求技术创新与适应性，助力本地物流企业保持竞争力，实现高效、安全、创新的支付生态。
               </p>
-              <a href="#contact" className="inline-flex px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-md hover:shadow-lg">
+              <a
+                href="#contact"
+                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
                 立即咨询
               </a>
             </div>
+            <div className="relative">
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/solutions/express_delivery_1.webp"
+                  alt="物流快递支付解决方案"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-slate-50">
+      {/* Enhancement Section */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">核心功能</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
+              提升
+            </h2>
+            <p className="text-2xl text-slate-700 font-semibold mb-4">
+              东南亚本地物流支付效率解决方案
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">货到付款</h3>
-              <p className="text-slate-600">支持COD收款，司机代收，快速结算</p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Image
+                src="/solutions/express_delivery_2.webp"
+                alt="东南亚本地物流支付效率"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">批量代付</h3>
-              <p className="text-slate-600">司机工资、运费结算自动化批量处理</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">实时对账</h3>
-              <p className="text-slate-600">交易数据实时同步，财务对账更轻松</p>
+            <div>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                OkoPay是一家位于东南亚的公司，利用新的支付技术使在线购物更加高效。他们使用QR码来减少现金交易，从而使卖家和送货公司更容易操作。如果客户不在家，他们可以通过送货人发送的链接进行支付。这个系统简化了支付流程，使得所有相关方都能更加便宜地进行交易。
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-br from-primary-500 to-primary-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-heading font-bold text-white mb-4">一站式支付服务专家</h2>
-          <p className="text-xl text-primary-50 mb-8">免费开通账号，立即开启便捷的支付之旅</p>
-          <a href="#contact" className="inline-flex px-8 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-slate-50 transition-all duration-200 shadow-md hover:shadow-lg">
-            立即咨询
-          </a>
+      {/* Case Study Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+        {/* Background Car Image */}
+        <div className="absolute bottom-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+          <Image
+            src="/solutions/express_delivery_3_car.webp"
+            alt="Background"
+            fill
+            className="object-contain object-bottom-right"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
+              成功案例
+            </h2>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
+              OkoPay 结合现代物流快递业务场景提供了多种支付可能性。更快捷的支付体验，赋能物流快递企业提效增收
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Solutions Cards */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  派件COD收款解决方案
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  为快递员提供便捷的货到付款收款工具，支持扫码收款、现金转账，实时到账
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  包裹代收及支付解决方案
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  客户不在家时，通过发送支付链接完成在线支付，简化收款流程
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  网点收款解决方案
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  为物流网点提供多种收款方式，支持扫码、刷卡、现金等多种支付方式
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  KA应收账款解决方案
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  为大客户提供专业的应收账款管理服务，自动对账、批量结算
+                </p>
+              </div>
+
+              <a
+                href="#contact"
+                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                立即咨询
+              </a>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/solutions/express_delivery_3.webp"
+                  alt="物流快递成功案例"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
