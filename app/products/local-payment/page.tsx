@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
+// import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -253,6 +253,13 @@ export default function LocalPaymentPage() {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      {/* <section id="contact" className="py-20 px-4 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <ContactForm />
+        </div>
+      </section> */}
 
       <Footer />
     </main>

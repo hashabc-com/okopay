@@ -14,15 +14,15 @@ type FormData = {
 };
 
 const COUNTRIES = [
-  { label: '印度尼西亚', code: 'ID', flag: '🇮🇩' },
-  { label: '菲律宾', code: 'PH', flag: '🇵🇭' },
-  { label: '马来西亚', code: 'MY', flag: '🇲🇾' },
-  { label: '泰国', code: 'TH', flag: '🇹🇭' },
-  { label: '中国香港', code: 'HK', flag: '🇭🇰' },
-  { label: '墨西哥', code: 'MX', flag: '🇲🇽' },
-  { label: '巴西', code: 'BR', flag: '🇧🇷' },
-  { label: '迪拜', code: 'AE', flag: '🇦🇪' },
-  { label: '其他', code: 'OTHER', flag: '🌐' },
+  { label: '印度尼西亚', code: 'ID', flag: '/country/icon_country_ID.png' },
+  { label: '菲律宾', code: 'PH', flag: '/country/icon_country_PH.png' },
+  { label: '马来西亚', code: 'MY', flag: '/country/icon_country_MS.png' },
+  { label: '泰国', code: 'TH', flag: '/country/icon_country_TH.png' },
+  { label: '中国香港', code: 'HK', flag: '/country/icon_country_HK.png' },
+  { label: '墨西哥', code: 'MX', flag: '/country/icon_country_MX.png' },
+  { label: '巴西', code: 'BR', flag: '/country/icon_country_BR.png' },
+  { label: '迪拜', code: 'AE', flag: '/country/icon_country_dubai.png' },
+  { label: '其他', code: 'OTHER', flag: '/country/icon_country_other.png' },
 ];
 
 const PHONE_PREFIXES = [
@@ -199,7 +199,11 @@ export default function ContactForm() {
                   */}
                 </div>
                 <span className="flex items-center text-slate-700 group-hover:text-blue-600 transition-colors">
-                  <span className="mr-2 text-xl">{country.flag}</span>
+                  <img 
+                    src={country.flag} 
+                    alt={country.label}
+                    className="mr-2 w-6 h-6 object-contain"
+                  />
                   {country.label}
                 </span>
               </label>
