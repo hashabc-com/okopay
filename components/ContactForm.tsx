@@ -42,9 +42,8 @@ export default function ContactForm() {
   ];
 
   const INQUIRY_TYPES = [
-    t('consult.form.inquiryTypes.payment'),
-    t('consult.form.inquiryTypes.business'),
-    t('consult.form.inquiryTypes.technical'),
+    t('consult.form.inquiryTypes.consult'),
+    t('consult.form.inquiryTypes.quote'),
     t('consult.form.inquiryTypes.other'),
   ];
 

@@ -697,10 +697,9 @@
       "inquiryType": "咨询内容",
       "inquiryTypePlaceholder": "请选择",
       "inquiryTypes": {
-        "payment": "支付接入",
-        "business": "商务合作",
-        "technical": "技术支持",
-        "other": "其他咨询"
+        "quote": "获取报价",
+        "consult": "开户咨询",
+        "other": "其他"
       },
       "note": "备注",
       "submit": "提交",

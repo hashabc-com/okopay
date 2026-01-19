@@ -697,9 +697,8 @@
       "inquiryType": "Inquiry Type",
       "inquiryTypePlaceholder": "Please select",
       "inquiryTypes": {
-        "payment": "Payment Integration",
-        "business": "Business Cooperation",
-        "technical": "Technical Support",
+        "consult":"Account Opening Inquiry",
+        "quote": "Get a Quote",
         "other": "Other Inquiries"
       },
       "note": "Note",
@@ -726,145 +725,6 @@
         "dubai": "Dubai",
         "other": "Other"
       }
-    }
-  }
-}
-      "subtitle": "Local Life Payment Solutions",
-      "description": "OkoPay focuses on local service payment solutions, providing the most advanced payment methods to improve payment efficiency and enhance user experience for both businesses and users",
-      "cta": "Consult Now",
-      "solutionTitle": "Integrated Local Life Payment Solutions",
-      "solutionDesc": "OkoPay provides better and more flexible payment solutions for local businesses",
-      "features": {
-        "diversePayment": {
-          "title": "Diverse Payment Methods",
-          "description": "We provide local merchants with convenient and secure payment methods, including online and offline payments. Partnering with local payment channels ensures fast and accurate fund settlement and arrival, meeting merchants' payment needs."
-        },
-        "marketing": {
-          "title": "Precision Marketing",
-          "description": "Through localized marketing strategies and tools, we help local merchants attract more potential customers. For example, using social media, search engine optimization, and local advertising to increase merchants' visibility and exposure in the local area."
-        },
-        "delivery": {
-          "title": "Local Courier Partnership",
-          "description": "We provide local merchants with fast and reliable logistics services to ensure goods can be delivered to customers on time. Partnering with local logistics companies to provide efficient logistics and delivery solutions, improving customer shopping experience."
-        },
-        "dataAnalysis": {
-          "title": "Data Analysis and Insights",
-          "description": "We use big data analysis to provide local merchants with deep customer behavior insights. Through data-driven decisions, help merchants optimize operational strategies, improve service quality and customer satisfaction."
-        }
-      }
-    },
-    "logistics": {
-      "title": "Logistics & Delivery",
-      "subtitle": "Comprehensive Logistics Payment Solutions",
-      "description": "OkoPay's comprehensive logistics payment solution integrates diverse payments, efficient processes, and excellent security technology to enhance user experience. Working closely with logistics companies, pursuing technological innovation and adaptability, helping local logistics companies maintain competitiveness and achieve an efficient, secure, and innovative payment ecosystem.",
-      "cta": "Consult Now",
-      "enhanceTitle": "Enhancing",
-      "enhanceSubtitle": "Southeast Asian Local Logistics Payment Efficiency Solutions",
-      "enhanceDesc": "OkoPay is a company based in Southeast Asia that uses new payment technologies to make online shopping more efficient. They use QR codes to reduce cash transactions, making it easier for sellers and delivery companies to operate. If customers are not at home, they can pay through links sent by delivery personnel. This system simplifies the payment process, making transactions cheaper for all parties involved.",
-      "caseStudyTitle": "Success Cases",
-      "caseStudyDesc": "OkoPay combines modern logistics and delivery business scenarios to provide multiple payment possibilities. Faster payment experience, empowering logistics companies to improve efficiency and increase revenue"
-    },
-    "fintech": {
-      "title": "Fintech",
-      "subtitle": "Smart Finance One-Stop Payment Solutions",
-      "description": "OkoPay provides fintech one-stop payment solutions, including global diverse payment methods, efficient payment processes, unified API management, detailed data analysis, comprehensively ensuring the safety and innovation of the fintech industry.",
-      "cta": "Consult Now",
-      "empowerTitle": "Empowering",
-      "empowerSubtitle": "Smart finance payment solutions, driving future fintech development",
-      "empowerDesc": "OkoPay provides one-stop fintech payment solutions, integrating digital finance payments, efficient processes, security and reliability. Through unified API calls and detailed data analysis, ensuring secure, innovative, and globalized payment experiences, improving user satisfaction and helping enterprise development.",
-      "features": {
-        "successRate": {
-          "title": "Improve Payment Success Rate",
-          "description": "Direct connection to local payment channels, real-time monitoring of transaction status, rich backup channels, efficient switching to optimal payment methods."
-        },
-        "securePayment": {
-          "title": "Secure Fast Payment",
-          "description": "Adopting advanced encryption technology and security measures to protect users' payment information and fund security. Meanwhile, establishing efficient fraud detection systems to timely detect and handle fraudulent behavior, reducing risks."
-        },
-        "marketing": {
-          "title": "Precision Marketing Strategy",
-          "description": "Through unified API calls, financial customers can easily obtain detailed data, optimize payment processes and user experience, enhance precision marketing strategies, and obtain higher revenue."
-        },
-        "globalSupport": {
-          "title": "Global Business Support",
-          "description": "Supporting multiple global currencies and payment methods, helping fintech companies rapidly expand into international markets. Providing localized payment solutions adapted to regulatory requirements and user habits in different regions."
-        }
-      }
-    },
-    "crossBorder": {
-      "title": "Cross-Border Trade",
-      "subtitle": "Cross-Border Trade One-Stop Payment Solutions",
-      "description": "Covering multiple Southeast Asian currencies and payment methods, providing you with convenient, efficient, and secure payment solutions. Helping enterprises expand business in the Southeast Asian region, providing professional local payment services to help you go overseas quickly.",
-      "cta": "Consult Now",
-      "solutionTitle": "For Cross-Border Trade",
-      "solutionSubtitle": "Practitioners providing one-stop cross-border collection and payment solutions",
-      "solutionDesc": "OkoPay provides one-stop fintech payment solutions, integrating digital finance payments, efficient processes, security and reliability. Through unified API calls and detailed data analysis, ensuring secure, innovative, and globalized payment experiences, improving user satisfaction and helping enterprise development.",
-      "features": {
-        "localChannel": {
-          "title": "One-Click Access to Local Collection Channels",
-          "description": "OkoPay provides advanced payment systems, offering diverse choices to meet different consumers' payment needs. Integrating online and offline transaction forms, merchants can quickly develop revenue businesses."
-        },
-        "localization": {
-          "title": "Localization Drives Going Overseas",
-          "description": "Through localization strategies to help business go overseas, deeply understanding local market needs, providing precise solutions. Achieving business localization, providing sustainable growth foundation for global expansion."
-        },
-        "fastSettlement": {
-          "title": "Faster Settlement, Cost Savings",
-          "description": "OkoPay's system allows cross-border retail partners to withdraw funds to partner banks on the same day, eliminating the T+5 troubles of traditional banks or institutions."
-        },
-        "security": {
-          "title": "Fund Security Guaranteed",
-          "description": "OkoPay holds complete financial or payment licenses in all regions where business is conducted, providing cross-border retail partners with a safe and compliant collection and payment environment. Combined with a strong legal team, ensuring fund security."
-        }
-      },
-      "paymentPromotionTitle": "Local Payment Promotes Cross-Border Trade",
-      "paymentPromotionDesc": "OkoPay tailors secure global payment experiences for cross-border e-commerce partners, ensuring compliance with local financial license laws and ensuring merchant fund security."
-    },
-    "localLife": {
-      "caseStudyTitle": "Success Stories",
-      "caseStudySubtitle": "OkoPay partners with local dining to create integrated local life payment solutions",
-      "cases": {
-        "swifood": {
-          "title": "Swifood Online Ordering and Payment System",
-          "description": "Provide complete online ordering and payment solutions for local dining, supporting multiple payment methods, improving user experience and increasing revenue.",
-          "features": {
-            "qrOrder": "QR code ordering, no queuing required",
-            "easyUse": "Simple and easy to use, improve business efficiency",
-            "dataAnalysis": "Data analysis, enhance business decisions"
-          }
-        },
-        "offline": {
-          "title": "Offline Restaurant and Store Order Payment",
-          "description": "Provide convenient payment solutions for offline merchants, supporting QR code payment, card payment and other methods",
-          "features": {
-            "multiPayment": "Multiple payment methods, meeting different needs",
-            "fastSettlement": "Online payment, fast settlement",
-            "dataInsight": "Data analysis, understand business status"
-          }
-        }
-      },
-      "ctaButton": "Consult Now"
-    },
-    "logistics": {
-      "cases": {
-        "cod": {
-          "title": "COD Payment Collection Solution",
-          "description": "Provide convenient cash-on-delivery collection tools for couriers, supporting QR code collection, cash transfer, real-time arrival"
-        },
-        "proxy": {
-          "title": "Parcel Proxy and Payment Solution",
-          "description": "When customers are not at home, complete online payment through payment link, simplifying collection process"
-        },
-        "network": {
-          "title": "Network Point Collection Solution",
-          "description": "Provide multiple collection methods for logistics network points, supporting QR code, card swipe, cash and other payment methods"
-        },
-        "receivable": {
-          "title": "KA Receivables Solution",
-          "description": "Provide professional receivables management services for large customers, automatic reconciliation, batch settlement"
-        }
-      },
-      "ctaButton": "Consult Now"
     }
   }
 }
