@@ -3,8 +3,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { useI18n } from "@/i18n/i18n-context";
+import Link from "next/link";
 
 export default function PaymentMethodPage() {
+  const { t } = useI18n();
+  
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -16,20 +20,20 @@ export default function PaymentMethodPage() {
             {/* Left: Content */}
             <div className="z-10 py-12 lg:py-0">
               <h1 className="text-xl font-bold text-slate-900 mb-4">
-                支付方式
+                {t('products.paymentMethod.title')}
               </h1>
               <h2 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-8 leading-tight">
-                <span className="text-primary-600">聚合</span> 多国家本地支付方式
+                {t('products.paymentMethod.subtitle')}
               </h2>
               <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
-                我们采用统一支付API，支持多国家本地支付方式。为全球商户助力本地增收，提升用户支付体验。
+                {t('products.paymentMethod.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-primary-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
 
             {/* Right: Image (Full Screen on Desktop) */}
@@ -65,10 +69,10 @@ export default function PaymentMethodPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">
-              多国家本地支付方式
+              {t('products.paymentMethod.multiCountry')}
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              覆盖菲律宾、印尼、马来西亚等市场的主流支付渠道，满足本地用户习惯
+              {t('products.paymentMethod.multiCountryDesc')}
             </p>
           </div>
 
@@ -77,13 +81,13 @@ export default function PaymentMethodPage() {
               <thead className="bg-white border-b border-slate-100">
                 <tr>
                   <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
-                    支持国家
+                    {t('products.paymentMethod.supportedCountry')}
                   </th>
                   <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
-                    支付类型
+                    {t('products.paymentMethod.paymentType')}
                   </th>
                   <th className="px-8 py-6 text-xl font-bold text-primary-600 tracking-wide">
-                    支付渠道
+                    {t('products.paymentMethod.paymentChannel')}
                   </th>
                 </tr>
               </thead>
@@ -155,11 +159,11 @@ export default function PaymentMethodPage() {
                     <td className="px-8 py-8 text-lg font-medium text-slate-800 whitespace-nowrap">
                       {row.type}
                     </td>
-                    <td className="px-8 py-6">
+                    <td className="px-4 lg:px-8 py-6 min-w-[480px] lg:min-w-0">
                       <img
                         src={row.logo}
                         alt="payment logo"
-                        className="h-10 object-contain"
+                        className="h-24 lg:h-10 object-contain w-full min-w-[240px] lg:w-auto lg:min-w-0"
                       />
                     </td>
                   </tr>

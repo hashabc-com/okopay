@@ -1,35 +1,31 @@
 'use client';
 
 import { useI18n } from '@/i18n/i18n-context';
+import Link from 'next/link';
 
 export default function Footer() {
   const { t } = useI18n();
 
   const footerLinks = {
     product: [
-      { label: 'Send Money', href: '#' },
-      { label: 'Receive Money', href: '#' },
-      { label: 'Exchange Rates', href: '#' },
-      { label: 'Business Solutions', href: '#' },
+      { label: t('nav.subProducts.localPayment'), href: '/products/local-payment' },
+      { label: t('nav.subProducts.disbursement'), href: '/products/disbursement' },
+      { label: t('nav.subProducts.merchantPlatform'), href: '/products/merchant-platform' },
+      { label: t('nav.subProducts.paymentMethod'), href: '/products/payment-method' },
+    ],
+    solutions: [
+      { label: t('nav.subSolutions.localLife'), href: '/solutions/local-life' },
+      { label: t('nav.subSolutions.logistics'), href: '/solutions/logistics' },
+      { label: t('nav.subSolutions.gaming'), href: '/solutions/gaming' },
+      { label: t('nav.subSolutions.fintech'), href: '/solutions/fintech' },
+      { label: t('nav.subSolutions.retail'), href: '/solutions/retail' },
+      { label: t('nav.subSolutions.crossBorder'), href: '/solutions/cross-border' },
     ],
     company: [
-      { label: 'About Us', href: '#' },
-      { label: 'Careers', href: '#' },
-      { label: 'Press', href: '#' },
-      { label: 'Blog', href: '#' },
-    ],
-    support: [
-      { label: 'Help Center', href: '#' },
-      { label: 'Contact Us', href: '#' },
-      { label: 'FAQs', href: '#' },
-      { label: 'Status', href: '#' },
-    ],
-    legal: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Compliance', href: '#' },
-    ],
+      { label: t('nav.subAbout.company'), href: '/about/company' },
+      { label: t('nav.subAbout.consult'), href: '/about/consult' },
+      { label: t('nav.pricing'), href: '/pricing' },
+    ]
   };
 
   return (
@@ -68,13 +64,26 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.product')}</h3>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('nav.products')}</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
+                  <Link href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
                     {link.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-heading font-semibold text-white mb-4">{t('nav.solutions')}</h3>
+            <ul className="space-y-3">
+              {footerLinks.solutions.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -85,35 +94,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
+                  <Link href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
                     {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.support')}</h3>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-heading font-semibold text-white mb-4">{t('footer.legal')}</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="hover:text-primary-400 transition-colors duration-200 cursor-pointer">
-                    {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -125,14 +108,6 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             {t('footer.rights')}
           </p>
-          <div className="flex items-center gap-6 text-sm text-slate-500">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              All systems operational
-            </span>
-          </div>
         </div>
       </div>
     </footer>

@@ -1,47 +1,52 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { useI18n } from '@/i18n/i18n-context';
 
 export default function SolutionsIndexPage() {
+  const { t } = useI18n();
+  
   const solutions = [
     {
-      title: '本地生活',
-      desc: '为本地生活服务提供完整的支付解决方案',
+      title: t('solutions.index.items.localLife.title'),
+      desc: t('solutions.index.items.localLife.description'),
       icon: '🍽️',
       link: '/solutions/local-life',
       gradient: 'from-orange-400 to-orange-600'
     },
     {
-      title: '物流快递',
-      desc: '为物流行业提供高效的支付和代付服务',
+      title: t('solutions.index.items.logistics.title'),
+      desc: t('solutions.index.items.logistics.description'),
       icon: '📦',
       link: '/solutions/logistics',
       gradient: 'from-primary-400 to-primary-600'
     },
     {
-      title: '游戏行业',
-      desc: '游戏充值、道具购买等支付解决方案',
+      title: t('solutions.index.items.gaming.title'),
+      desc: t('solutions.index.items.gaming.description'),
       icon: '🎮',
       link: '/solutions/gaming',
       gradient: 'from-purple-400 to-purple-600'
     },
     {
-      title: '金融科技',
-      desc: '为金融科技公司提供安全可靠的支付服务',
+      title: t('solutions.index.items.fintech.title'),
+      desc: t('solutions.index.items.fintech.description'),
       icon: '💰',
       link: '/solutions/fintech',
       gradient: 'from-green-400 to-green-600'
     },
     {
-      title: '零售行业',
-      desc: '线上线下零售的全场景支付解决方案',
+      title: t('solutions.index.items.retail.title'),
+      desc: t('solutions.index.items.retail.description'),
       icon: '🛒',
       link: '/solutions/retail',
       gradient: 'from-pink-400 to-pink-600'
     },
     {
-      title: '跨境贸易',
-      desc: '跨境电商支付、结算一站式服务',
+      title: t('solutions.index.items.crossBorder.title'),
+      desc: t('solutions.index.items.crossBorder.description'),
       icon: '🌏',
       link: '/solutions/cross-border',
       gradient: 'from-cyan-400 to-cyan-600'
@@ -55,10 +60,10 @@ export default function SolutionsIndexPage() {
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h1 className="text-5xl font-heading font-bold text-slate-900 mb-6">
-            行业解决方案
+            {t('solutions.index.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            为不同行业量身定制的支付解决方案，助力业务快速增长
+            {t('solutions.index.description')}
           </p>
         </div>
 
@@ -72,7 +77,7 @@ export default function SolutionsIndexPage() {
                 <h3 className="text-2xl font-semibold text-slate-900 mb-3">{solution.title}</h3>
                 <p className="text-slate-600 mb-4">{solution.desc}</p>
                 <div className="flex items-center text-primary-600 font-medium">
-                  了解更多
+                  {t('solutions.index.learnMore')}
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

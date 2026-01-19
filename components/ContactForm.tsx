@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useI18n } from '@/i18n/i18n-context';
 
 type FormData = {
   name: string;
@@ -13,38 +14,40 @@ type FormData = {
   note: string;
 };
 
-const COUNTRIES = [
-  { label: '印度尼西亚', code: 'ID', flag: '/country/icon_country_ID.png' },
-  { label: '菲律宾', code: 'PH', flag: '/country/icon_country_PH.png' },
-  { label: '马来西亚', code: 'MY', flag: '/country/icon_country_MS.png' },
-  { label: '泰国', code: 'TH', flag: '/country/icon_country_TH.png' },
-  { label: '中国香港', code: 'HK', flag: '/country/icon_country_HK.png' },
-  { label: '墨西哥', code: 'MX', flag: '/country/icon_country_MX.png' },
-  { label: '巴西', code: 'BR', flag: '/country/icon_country_BR.png' },
-  { label: '迪拜', code: 'AE', flag: '/country/icon_country_dubai.png' },
-  { label: '其他', code: 'OTHER', flag: '/country/icon_country_other.png' },
-];
-
-const PHONE_PREFIXES = [
-  { code: '+86', label: 'CN +86' },
-  { code: '+62', label: 'ID +62' },
-  { code: '+63', label: 'PH +63' },
-  { code: '+60', label: 'MY +60' },
-  { code: '+66', label: 'TH +66' },
-  { code: '+852', label: 'HK +852' },
-  { code: '+52', label: 'MX +52' },
-  { code: '+55', label: 'BR +55' },
-  { code: '+971', label: 'AE +971' },
-];
-
-const INQUIRY_TYPES = [
-  '支付接入',
-  '商务合作',
-  '技术支持',
-  '其他咨询',
-];
-
 export default function ContactForm() {
+  const { t } = useI18n();
+  
+  const COUNTRIES = [
+    { label: t('consult.form.countries.indonesia'), code: 'ID', flag: '/country/icon_country_ID.png' },
+    { label: t('consult.form.countries.philippines'), code: 'PH', flag: '/country/icon_country_PH.png' },
+    { label: t('consult.form.countries.malaysia'), code: 'MY', flag: '/country/icon_country_MS.png' },
+    { label: t('consult.form.countries.thailand'), code: 'TH', flag: '/country/icon_country_TH.png' },
+    { label: t('consult.form.countries.hongkong'), code: 'HK', flag: '/country/icon_country_HK.png' },
+    { label: t('consult.form.countries.mexico'), code: 'MX', flag: '/country/icon_country_MX.png' },
+    { label: t('consult.form.countries.brazil'), code: 'BR', flag: '/country/icon_country_BR.png' },
+    { label: t('consult.form.countries.dubai'), code: 'AE', flag: '/country/icon_country_dubai.png' },
+    { label: t('consult.form.countries.other'), code: 'OTHER', flag: '/country/icon_country_other.png' },
+  ];
+
+  const PHONE_PREFIXES = [
+    { code: '+86', label: 'CN +86' },
+    { code: '+62', label: 'ID +62' },
+    { code: '+63', label: 'PH +63' },
+    { code: '+60', label: 'MY +60' },
+    { code: '+66', label: 'TH +66' },
+    { code: '+852', label: 'HK +852' },
+    { code: '+52', label: 'MX +52' },
+    { code: '+55', label: 'BR +55' },
+    { code: '+971', label: 'AE +971' },
+  ];
+
+  const INQUIRY_TYPES = [
+    t('consult.form.inquiryTypes.payment'),
+    t('consult.form.inquiryTypes.business'),
+    t('consult.form.inquiryTypes.technical'),
+    t('consult.form.inquiryTypes.other'),
+  ];
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -81,13 +84,13 @@ export default function ContactForm() {
 
   const validate = () => {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
-    if (!formData.name.trim()) newErrors.name = '请填写您的姓名';
-    if (!formData.email.trim()) newErrors.email = '请填写您的联系邮箱';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = '邮箱格式不正确';
-    if (!formData.phone.trim()) newErrors.phone = '请填写您的联系号码';
-    if (formData.countries.length === 0) newErrors.countries = '请选择国家或地区';
-    if (!formData.company.trim()) newErrors.company = '请填写您的公司名称';
-    if (!formData.inquiryType) newErrors.inquiryType = '请选择咨询内容';
+    if (!formData.name.trim()) newErrors.name = t('consult.form.errors.nameRequired');
+    if (!formData.email.trim()) newErrors.email = t('consult.form.errors.emailRequired');
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = t('consult.form.errors.emailInvalid');
+    if (!formData.phone.trim()) newErrors.phone = t('consult.form.errors.phoneRequired');
+    if (formData.countries.length === 0) newErrors.countries = t('consult.form.errors.countryRequired');
+    if (!formData.company.trim()) newErrors.company = t('consult.form.errors.companyRequired');
+    if (!formData.inquiryType) newErrors.inquiryType = t('consult.form.errors.inquiryTypeRequired');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -97,7 +100,7 @@ export default function ContactForm() {
     e.preventDefault();
     if (validate()) {
       console.log('Form submitted:', formData);
-      alert('提交成功！我们将尽快联系您');
+      alert(t('consult.form.submitSuccess'));
       // Reset form or redirect
     }
   };
@@ -105,7 +108,7 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto border border-primary-50">
       <h2 className="text-3xl font-bold text-slate-900 mb-8">
-        立即开启高效支付之旅！
+        {t('consult.form.title')}
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -113,14 +116,14 @@ export default function ContactForm() {
           {/* 姓名 */}
           <div className="space-y-2">
             <label className="block text-sm font-bold text-slate-900">
-              姓名<span className="text-primary-600">*</span>
+              {t('consult.form.name')}<span className="text-primary-600">{t('consult.form.required')}</span>
             </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              placeholder="请填写您的姓名"
+              placeholder={t('consult.form.namePlaceholder')}
               className={`w-full px-4 py-3 rounded-lg border ${
                 errors.name ? 'border-red-500' : 'border-slate-200'
               } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
@@ -130,14 +133,14 @@ export default function ContactForm() {
           {/* 联系邮箱 */}
           <div className="space-y-2">
             <label className="block text-sm font-bold text-slate-900">
-              联系邮箱<span className="text-primary-600">*</span>
+              {t('consult.form.email')}<span className="text-primary-600">{t('consult.form.required')}</span>
             </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              placeholder="请填写您的联系邮箱"
+              placeholder={t('consult.form.emailPlaceholder')}
               className={`w-full px-4 py-3 rounded-lg border ${
                 errors.email ? 'border-red-500' : 'border-slate-200'
               } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
@@ -148,7 +151,7 @@ export default function ContactForm() {
         {/* 联系号码 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            联系号码<span className="text-primary-600">*</span>
+            {t('consult.form.phone')}<span className="text-primary-600">{t('consult.form.required')}</span>
           </label>
           <div className="flex">
             <select
@@ -168,7 +171,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              placeholder="请填写您的联系号码"
+              placeholder={t('consult.form.phonePlaceholder')}
               className={`flex-1 px-4 py-3 rounded-r-lg border ${
                 errors.phone ? 'border-red-500' : 'border-slate-200'
               } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
@@ -179,7 +182,7 @@ export default function ContactForm() {
         {/* 国家或地区 */}
         <div className="space-y-3">
           <label className="block text-sm font-bold text-slate-900">
-            国家或地区<span className="text-primary-600">*</span>
+            {t('consult.form.country')}<span className="text-primary-600">{t('consult.form.required')}</span>
           </label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {COUNTRIES.map((country) => (
@@ -219,14 +222,14 @@ export default function ContactForm() {
         {/* 公司名称 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            公司名称<span className="text-primary-600">*</span>
+            {t('consult.form.company')}<span className="text-primary-600">{t('consult.form.required')}</span>
           </label>
           <input
             type="text"
             name="company"
             value={formData.company}
             onChange={handleInputChange}
-            placeholder="请填写您的公司名称"
+            placeholder={t('consult.form.companyPlaceholder')}
             className={`w-full px-4 py-3 rounded-lg border ${
               errors.company ? 'border-red-500' : 'border-slate-200'
             } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
@@ -236,7 +239,7 @@ export default function ContactForm() {
         {/* 咨询内容 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            咨询内容<span className="text-primary-600">*</span>
+            {t('consult.form.inquiryType')}<span className="text-primary-600">{t('consult.form.required')}</span>
           </label>
           <div className="relative">
             <select
@@ -247,7 +250,7 @@ export default function ContactForm() {
                 errors.inquiryType ? 'border-red-500 text-red-500' : 'border-slate-200 text-slate-900'
               } focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all`}
             >
-              <option value="" disabled>请选择</option>
+              <option value="" disabled>{t('consult.form.inquiryTypePlaceholder')}</option>
               {INQUIRY_TYPES.map((type) => (
                 <option key={type} value={type}>
                   {type}
@@ -265,7 +268,7 @@ export default function ContactForm() {
         {/* 备注 */}
         <div className="space-y-2">
           <label className="block text-sm font-bold text-slate-900">
-            备注
+            {t('consult.form.note')}
           </label>
           <div className="relative">
             <textarea
@@ -290,7 +293,7 @@ export default function ContactForm() {
           type="submit"
           className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:-translate-y-0.5"
         >
-          提交
+          {t('consult.form.submit')}
         </button>
       </form>
     </div>

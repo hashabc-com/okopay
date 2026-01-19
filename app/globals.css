@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  /* Responsive Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Colors */
   --color-primary-50: #EFF6FF;
   --color-primary-100: #DBEAFE;
   --color-primary-200: #BFDBFE;
@@ -28,6 +36,7 @@
   --color-accent-light: #22D3EE;
   --color-accent-dark: #0891B2;
   
+  /* Fonts */
   --font-family-sans: 'Open Sans', system-ui, sans-serif;
   --font-family-heading: 'Poppins', system-ui, sans-serif;
 }

@@ -164,5 +164,568 @@
     "legal": "法律",
     "followUs": "关注我们",
     "rights": "© 2026 OkoPay. 保留所有权利。"
+  },
+  "products": {
+    "paymentMethod": {
+      "title": "支付方式",
+      "subtitle": "聚合多国家本地支付方式",
+      "description": "我们采用统一支付API，支持多国家本地支付方式。为全球商户助力本地增收，提升用户支付体验。",
+      "cta": "立即咨询",
+      "multiCountry": "多国家本地支付方式",
+      "multiCountryDesc": "覆盖菲律宾、印尼、马来西亚等市场的主流支付渠道，满足本地用户习惯",
+      "supportedCountry": "支持国家",
+      "paymentType": "支付类型",
+      "paymentChannel": "支付渠道",
+      "countries": {
+        "philippines": "菲律宾",
+        "indonesia": "印度尼西亚",
+        "malaysia": "马来西亚",
+        "thailand": "泰国"
+      }
+    },
+    "disbursement": {
+      "title": "本地代付",
+      "subtitle": "极速打款，安全高效",
+      "description": "OkoPay为企业提供随时随地转账业务，支持电子钱包、信用卡或借记卡多方式转账，确保运营资金周转灵活，提供安全保障。",
+      "cta": "立即咨询",
+      "fastSecure": "快速、安全，实时打款",
+      "fastSecureDesc": "OkoPay支持包括本地银行卡、电子钱包、网银支付等多种打款方式，覆盖菲律宾，印度尼西亚，泰国，马来西亚等多个国家，支持自动批量转账，高安全性、高成功率、高灵活性为打款交易保驾护航。",
+      "features": {
+        "channel": {
+          "title": "支付渠道",
+          "description": "本地银行账户、电子钱包、实体便利店、当铺等"
+        },
+        "method": {
+          "title": "支付方式",
+          "description": "可以选择手动或API批量打款"
+        },
+        "smallAmount": {
+          "title": "小额代付",
+          "description": "支持金额、网络游戏、零售业和转账类型服务的小额代付"
+        },
+        "largeAmount": {
+          "title": "大额代付",
+          "description": "贸易支付、代发工资、企业转账"
+        },
+        "currency": {
+          "title": "支付货币",
+          "description": "支持多种货币结算"
+        },
+        "arrival": {
+          "title": "到账时间",
+          "description": "实时到账，快速便捷"
+        }
+      },
+      "fastPaymentTitle": "快速、安全，实时打款",
+      "countryTabs": {
+        "philippines": "菲律宾",
+        "indonesia": "印度尼西亚",
+        "malaysia": "马来西亚",
+        "thailand": "泰国"
+      },
+      "bankPayment": "银行打款",
+      "bankPaymentDesc": "我们与{country}当地多家当地银行建立直连合作关系，支持主流银行打款，资金安全打款成功率极高，费用低廉。",
+      "eWallet": "电子钱包",
+      "eWalletDesc": "我们支持支付到{country}流行的电子钱包，满足客户的直接充值需求。",
+      "moreSupport": "更多支持...",
+      "scenariosTitle": "更多应用场景",
+      "scenariosDesc": "本地资金代付，可通过自动化批量打款操作，实现低费用、减少财务核对工作，提高企业财务处理效率，降低支付成本，助力企业运营高效化。",
+      "scenarios": {
+        "salary": {
+          "title": "企业工资代付",
+          "description": "批量发放员工工资，提高财务处理效率"
+        },
+        "supplier": {
+          "title": "供应商货款代付",
+          "description": "快速结算供应商款项，保持良好合作关系"
+        },
+        "refund": {
+          "title": "商户交易，退款业务",
+          "description": "处理商户交易退款，提升用户体验"
+        },
+        "withdrawal": {
+          "title": "实时转账/取款",
+          "description": "支持用户实时转账和取款需求"
+        }
+      },
+      "multiCountryTitle": "多国家<br />本地代付服务",
+      "multiCountryDesc": "OkoPay目前支持菲律宾，印度尼西亚，泰国，马来西亚等热门地区提款服务，商户可随时随地在线提交订单，全自动操作，资金快速到账，全方位智能代付系统。",
+      "advantagesTitle": "本地代付一体化优势",
+      "advantages": {
+        "diverseChannels": {
+          "title": "多样化的代付通道",
+          "description": "本地银行账户，电子钱包等代付通道"
+        },
+        "highSuccess": {
+          "title": "成功率高",
+          "description": "全球化支付产品，成功率达到99%"
+        },
+        "security": {
+          "title": "安全保障",
+          "description": "合规KYC验证，保证每笔交易安全"
+        },
+        "support": {
+          "title": "7X24全天候优质服务",
+          "description": "全天候及时响应需求，快速解决问题"
+        }
+      }
+    },
+    "merchantPlatform": {
+      "title": "商户管理平台",
+      "subtitle": "全方位的商户服务管理系统",
+      "description": "提供完善的商户后台管理系统，实时查看交易数据，管理订单，统计分析，让业务运营更高效。多维度数据报表，助您洞察业务增长点。",
+      "cta": "立即咨询",
+      "smartManagement": "智能的运营管理系统",
+      "smartManagementDesc": "让资金运营更灵活",
+      "smartManagementDetail": "OkoPay 利用智能数据工具合理优化商户资金使用运营方案，适应业务需求，高效配置，提升整体财务管理及运营。",
+      "features": {
+        "fundManagement": {
+          "title": "资金管理",
+          "description": "实时查看账户资金，随时调配，灵活解决资金周转压力。轻松应对经营需求，提升财务灵活性。"
+        },
+        "autoSettlement": {
+          "title": "自动结算",
+          "description": "设置自动化方案快速回款结算，减少人工操作，简化流程高效运营，保障企业资金灵活流转。"
+        },
+        "multiAccount": {
+          "title": "多账号管理",
+          "description": "合理高效地管理商户多个子账号，灵活分配，为商户运营提供便利，加快业务拓展步伐。"
+        },
+        "dataAnalysis": {
+          "title": "数据统计分析",
+          "description": "交易数据实时可视化，准确了解每笔交易，精准定位业务方向，助力决策。"
+        }
+      },
+      "comprehensiveTitle": "综合全面",
+      "comprehensiveDesc": "实时掌控您的业务资金",
+      "comprehensiveDetail": "OkoPay商户管理平台集成所有您需要的工具。实时数据、财务报表、风险监控，让您的商业决策更明智。通过我们的直观界面，轻松管理多渠道交易，优化运营效率。",
+      "gridFeatures": {
+        "fundManagementTitle": "资金管理",
+        "fundManagementDesc": "实时查看账户资金，随时调配，灵活解决资金周转压力。轻松应对经营需求，提升财务灵活性。",
+        "autoSettlementTitle": "自动结算",
+        "autoSettlementDesc": "实时处理交易款项，简化财务流程，为您提供便捷、精确的结算服务，省时省力。",
+        "multiAccountTitle": "多账号管理",
+        "multiAccountDesc": "多账号管理服务简化您的运营，集中管理多个账户，提升效率。通过统一平台，轻松监控、调整，实现更便捷的商户账户管理。",
+        "support247Title": "24/7服务",
+        "support247Desc": "我们提供7/24小时全天候服务，确保您随时获得所需支持。无论何时何地，我们都致力于解决您的问题，保障您的顺畅运营。"
+      },
+      "onboardingTitle": "商户入驻 合作流程",
+      "onboardingDesc": "OkoPay通过清晰高效的结算流程确保与商家的金融交易顺利进行，提高可靠性和满意度。"
+    },
+    "localPayment": {
+      "title": "本地收单",
+      "subtitle": "极速收单，资金到账更快",
+      "description": "OkoPay为本地企业提供快捷高效的收单解决方案，满足多场景的支付需求,提升支付成功率，保障交易安全，提供更好的用户体验。",
+      "cta": "立即咨询",
+      "moreScenarios": "更多的应用场景",
+      "scenariosDesc": "OkoPay提供网页/手机端付款界面，企业主无需开发即可高效整合适配不同渠道（例如QRcode、网上银行、柜台银行、支付中心和电子钱包）更方便地接受付款。",
+      "paymentLink": {
+        "title": "支付链接",
+        "description": "我们为本地商户提供安全便捷的支付选择，无论是在线还是线下，我们与本地渠道合作，以迅速结算资金，确保及时支付，满足他们的需求。"
+      },
+      "onlinePayment": {
+        "title": "在线支付",
+        "description": "我们通过使用社交媒体、搜索引擎优化和本地广告等本地化营销工具，帮助本地商户吸引更多客户，提升在社区中的知名度。"
+      },
+      "apiIntegration": {
+        "title": "API对接",
+        "description": "我们为本地商户提供快速可靠的物流服务，通过与本地公司合作，确保及时送达，提升整体顾客购物体验。"
+      },
+      "serviceScenarios": "服务场景",
+      "serviceScenariosDesc": "我们通过线上和线下多种方式提升收款效率",
+      "scenarios": {
+        "cod": {
+          "name": "货到付款",
+          "description": "OkoPay已经在菲律宾、印尼、泰国、马来与本地银行、持牌机构合作货币兑换业务，为OkoPay体系内的收单商户提供安全、合规、灵活的货币兑换服务"
+        },
+        "travel": {
+          "name": "旅行支付",
+          "description": "OkoPay 可以帮助您集成更安全的旅游行业支付解决方案"
+        },
+        "hotel": {
+          "name": "酒店预订",
+          "description": "OkoPay支持在线酒店支付系统整合，用户随时随地可下单"
+        },
+        "restaurant": {
+          "name": "餐厅点餐",
+          "description": "餐厅饭店集成线上点餐系统让您的业务更加灵活"
+        },
+        "toll": {
+          "name": "收费站",
+          "description": "我们提供得来速服务，让您的客户无需离开车辆即可方便地完成交易"
+        },
+        "delivery": {
+          "name": "网上送餐",
+          "description": "在线订购服务，使用户能够通过无缝的数字平台方便地订购和接收他们最喜欢的餐点"
+        }
+      }
+    }
+  },
+  "pricing": {
+    "title": "价格",
+    "subtitle": "量身定制 价格方案",
+    "description": "OkoPay 系于2021年成立的跨境收款及本地支付解决方案公司，专注于为客户提供定制化金融解决方案。其植根于新兴市场，服务地区以东南亚、拉美、中东为主。",
+    "features": {
+      "freeAccess": {
+        "title": "免费接入，多国可用",
+        "description": "一次接入多国可用，助力快速全球化业务"
+      },
+      "fixedRate": {
+        "title": "费率固定，灵活组合",
+        "description": "价格公开透明，每一笔交易计费成本清晰明了"
+      },
+      "lowCost": {
+        "title": "支付本地化，费用极低",
+        "description": "全球支付方案最优定价，为您降本增效"
+      }
+    }
+  },
+  "company": {
+    "title": "关于我们",
+    "subtitle": "值得信赖的本地支付服务专家",
+    "intro": {
+      "title": "OkoPay - 您的本地支付解决方案专家",
+      "description1": "OkoPay致力于为全球企业提供专业、安全、高效的支付解决方案。我们深耕东南亚市场，持有多个国家和地区的官方支付牌照，为客户提供合规、可靠的支付服务。",
+      "description2": "我们的使命是让跨境支付变得简单、快捷、安全，帮助企业轻松拓展全球业务，让每一笔交易都能快速、安全地完成。"
+    },
+    "advantages": {
+      "title": "核心优势",
+      "fullLicense": {
+        "title": "牌照齐全",
+        "description": "持有多个国家和地区的官方支付牌照"
+      },
+      "localConnection": {
+        "title": "本地直连",
+        "description": "与本地支付渠道直接合作，确保高成功率"
+      },
+      "support247": {
+        "title": "7x24服务",
+        "description": "全天候客户服务，及时响应您的需求"
+      }
+    },
+    "licenses": {
+      "title": "牌照资质",
+      "description": "在东南亚，我们持有官方牌照，凭借合规资质为每笔交易提供安全、高效、合法的保障"
+    },
+    "partners": {
+      "title": "合作伙伴",
+      "description": "与全球知名企业建立战略合作关系"
+    }
+  },
+  "solutions": {
+    "index": {
+      "title": "行业解决方案",
+      "description": "为不同行业量身定制的支付解决方案，助力业务快速增长",
+      "learnMore": "了解更多",
+      "items": {
+        "localLife": {
+          "title": "本地生活",
+          "description": "为本地生活服务提供完整的支付解决方案"
+        },
+        "logistics": {
+          "title": "物流快递",
+          "description": "为物流行业提供高效的支付和代付服务"
+        },
+        "gaming": {
+          "title": "游戏行业",
+          "description": "游戏充值、道具购买等支付解决方案"
+        },
+        "fintech": {
+          "title": "金融科技",
+          "description": "为金融科技公司提供安全可靠的支付服务"
+        },
+        "retail": {
+          "title": "零售行业",
+          "description": "线上线下零售的全场景支付解决方案"
+        },
+        "crossBorder": {
+          "title": "跨境贸易",
+          "description": "跨境电商支付、结算一站式服务"
+        }
+      }
+    },
+    "retail": {
+      "title": "零售行业",
+      "subtitle": "零售业一体化支付解决方案",
+      "description": "OkoPay 致力助推东南亚零售，构建一体化支付解决方案，确保安全与便捷。借创新科技，提供可靠支付，创造高效安全交易体验，加强零售行业生态稳健发展。",
+      "cta": "立即咨询",
+      "empowerTitle": "助力",
+      "empowerSubtitle": "东南亚零售行业，打造更安全易操作的支付解决方案",
+      "empowerDesc": "OkoPay整合先进技术，为零售商提供东南亚主流支付，保障安全，简化操作。智能支付系统提升用户体验，实现便捷购物。持续优化防欺诈，确保交易安全。致力于与零售商共同打造数字支付新标准，促进业务增长。",
+      "features": {
+        "oneStop": {
+          "title": "一站式支付服务",
+          "description": "OkoPay提供先进的支付系统，提供多样选择，满足不同消费者的支付需求。集成线上线下的交易形式，商户可迅速开展营收业务。"
+        },
+        "security": {
+          "title": "支付安全保障",
+          "description": "采用先进的加密技术和安全措施，保护用户的支付信息和资金安全。同时，建立高效的欺诈检测系统，及时发现和处理欺诈行为，降低风险。"
+        },
+        "experience": {
+          "title": "深化用户支付体验",
+          "description": "搭建智能支付系统，提升用户在购物过程中的体验，实现更便捷、高效的支付流程。基于数字化交易更深入了解用户购物需求，提供更好的决策方案。"
+        },
+        "dataAnalysis": {
+          "title": "数据分析优化",
+          "description": "利用大数据分析，为零售商提供深入的用户行为洞察。通过数据驱动的决策，优化库存管理、定价策略和营销活动，提升整体运营效率和盈利能力。"
+        },
+        "terminals": {
+          "title": "多种支付终端",
+          "description": "支付本地化，满足当地多种支付终端，均适配手机、PC、平板等设备，可实现线上线下交易模式。"
+        }
+      },
+      "caseStudyTitle": "成功案例",
+      "caseStudySubtitle": "丰富服务场景，满足更广泛需求",
+      "cases": {
+        "franchise": {
+          "title": "加盟店",
+          "description": "我们为加盟店定制支付解决方案，确保交易顺畅并提高财务管理运营效率"
+        },
+        "convenience": {
+          "title": "便利店",
+          "description": "OkoPay通过专门支付解决方案简化了便利店的交易和财务结算"
+        },
+        "store": {
+          "title": "商店",
+          "description": "我们为商场门店提供量身定制的支付解决方案，提高交易效率和丰富支付方式"
+        },
+        "market": {
+          "title": "市场",
+          "description": "OkoPay不断简化支付流程，以提高商家和客户的支付便利性和高效性"
+        }
+      }
+    },
+    "gaming": {
+      "title": "游戏",
+      "subtitle": "游戏行业全方位支付解决方案",
+      "description": "OkoPay 融合游戏行业，帮助游戏行业建立一套全面而有效的支付解决方案，提高支付便捷性、安全性和用户体验，从而促进业务的快速发展。",
+      "cta": "立即咨询",
+      "empowerTitle": "赋能游戏",
+      "empowerSubtitle": "支付解决方案，加速收益增长",
+      "empowerDesc": "OkoPay游戏支付全方位解决方案，集成多元支付和欺诈检测，保障高成功率和最新技术。通过API调用，实现一键支付，提供全球玩家安全、便捷支付体验。助力游戏发行商打造稳定支付生态，促进全球化发展。",
+      "features": {
+        "multiPayment": {
+          "title": "多元支付方式",
+          "description": "本土游戏与本地最新支付技术相结合，多种支付方式为游戏发行商提供稳定可靠的支付服务，满足当地玩家多样化的支付需求，提升支付成功率。"
+        },
+        "securePayment": {
+          "title": "安全快捷支付",
+          "description": "采用先进的先进的加密技术和安全措施，保护用户的支付信息和资金安全。同时，建立高效的欺诈检测系统，及时发现和处理欺诈行为，降低风险。"
+        },
+        "marketing": {
+          "title": "精准营销策略",
+          "description": "精细化运营管理，游戏发行商可轻松获取更多可分析数据，优化支付流程和用户体验，提升精准营销策略，获取更高收益。"
+        },
+        "globalSupport": {
+          "title": "全球化支持",
+          "description": "支持多币种结算，覆盖全球主要游戏市场。提供本地化支付方式，满足不同地区玩家需求，助力游戏出海，拓展国际市场。"
+        },
+        "localized": {
+          "title": "本地定制化服务",
+          "description": "OkoPay提供全球本地化定制服务，满足不同游戏发行商支付方案，建立更流畅的玩家支付体验。"
+        }
+      }
+    },
+    "fintech": {
+      "title": "金融科技",
+      "subtitle": "智慧金融一站式支付解决方案",
+      "description": "OkoPay提供金融科技一站式支付解决方案，包括全球多元支付方式，高效支付流程，统一API管理，细致数据分析，全面保障金融科技行业的安全与创新。",
+      "cta": "立即咨询",
+      "empowerTitle": "助力",
+      "empowerSubtitle": "智慧金融支付解决方案，推动未来金融科技发展",
+      "empowerDesc": "OkoPay提供一站式金融科技支付解决方案，整合数字金融支付，高效流程，安全可靠。通过统一API调用，细致数据分析，确保安全、创新、全球化的支付体验，提升用户满意度，助力企业发展。",
+      "features": {
+        "successRate": {
+          "title": "提升支付成功率",
+          "description": "本地支付渠道直连，实时监测交易状态，备用渠道丰富，高效切换最优支付方式。"
+        },
+        "securePayment": {
+          "title": "安全快捷支付",
+          "description": "采用先进的加密技术和安全措施，保护用户的支付信息和资金安全。同时，建立高效的欺诈检测系统，及时发现和处理欺诈行为，降低风险。"
+        },
+        "marketing": {
+          "title": "精准营销策略",
+          "description": "通过统一API调用，金融客户可轻松获取精细数据，优化支付流程和用户体验，提升精准营销策略，获取更高收益。"
+        },
+        "globalSupport": {
+          "title": "全球化业务支持",
+          "description": "支持全球多种货币和支付方式，助力金融科技企业快速拓展国际市场。提供本地化支付解决方案，适应不同地区的监管要求和用户习惯。"
+        }
+      }
+    },
+    "crossBorder": {
+      "title": "跨境贸易",
+      "subtitle": "跨境贸易 一站式支付解决方案",
+      "description": "覆盖东南亚多国货币和支付方式，为您提供便捷、高效、安全的支付解决方案。助力企业在东南亚地区拓展业务，为您提供专业的本地支付服务，助力快速出海。",
+      "cta": "立即咨询",
+      "solutionTitle": "为跨境贸易",
+      "solutionSubtitle": "从业者提供一站式跨境收付款解决方案",
+      "solutionDesc": "OkoPay提供一站式金融科技支付解决方案，整合数字金融支付，高效流程，安全可靠。通过统一API调用，细致数据分析，确保安全、创新、全球化的支付体验，提升用户满意度，助力企业发展。",
+      "features": {
+        "localChannel": {
+          "title": "一键打通本土收款渠道",
+          "description": "OkoPay提供先进的支付系统，提供多样选择，满足不同消费者的支付需求。集成线上线下的交易形式，商户可迅速开展营收业务。"
+        },
+        "localization": {
+          "title": "本地化助推出海",
+          "description": "通过本地化策略助力业务出海，深入理解当地市场需求，提供精准解决方案。实现业务的本土化，为全球拓展提供可持续增长的基础。"
+        },
+        "fastSettlement": {
+          "title": "结算更快 费用好省",
+          "description": "OkoPay 系统可以让跨境零售行业伙伴们在当天把款项提领到合作的银行中，免去传统银行或机构的 T+5 的困扰。"
+        },
+        "security": {
+          "title": "资金安全有保障",
+          "description": "OkoPay 在业务开展的地区均有齐全的金融或支付牌照，为跨境零售行业伙伴们安全合规的收付款环境，加上强大的法律团队配合，确保资金的安全性。"
+        }
+      },
+      "paymentPromotionTitle": "本地支付促进跨境贸易",
+      "paymentPromotionDesc": "OkoPay为跨境电子商务合作伙伴量身定制安全的全球支付体验，确保遵守当地金融许可证法律，并确保商户资金的安全。"
+    },
+    "localLife": {
+      "title": "本地生活",
+      "subtitle": "本地生活支付解决方案",
+      "description": "OkoPay专注于本地服务支付解决方案，提供最先进的支付方式，以提高支付效率，让企业和用户支付体验更好",
+      "cta": "立即咨询",
+      "solutionTitle": "本地生活一体化支付解决方案",
+      "solutionDesc": "OkoPay 为当地企业提供更好更灵活的支付解决方案",
+      "features": {
+        "diversePayment": {
+          "title": "支付方式多元化",
+          "description": "我们为本地商户提供便捷、安全的支付方式，包括线上支付和线下支付。与当地支付渠道合作，确保快速、准确的资金结算和到账，满足商户的支付需求。"
+        },
+        "marketing": {
+          "title": "精准营销",
+          "description": "我们通过本地化的营销策略和工具，帮助本地商户吸引更多的潜在客户。例如，利用社交媒体、搜索引擎优化和本地广告等渠道，提高商户在当地的知名度和曝光率。"
+        },
+        "delivery": {
+          "title": "当地快递合作",
+          "description": "我们为本地商户提供快速、可靠的物流服务，确保商品能够及时送达客户手中。与当地物流公司合作，提供高效的物流配送方案，提高客户的购物体验。"
+        },
+        "dataAnalysis": {
+          "title": "数据分析与洞察",
+          "description": "我们利用大数据分析，为本地商户提供深入的客户行为洞察。通过数据驱动的决策，帮助商户优化运营策略，提升服务质量和客户满意度。"
+        }
+      },
+      "caseStudyTitle": "成功案例",
+      "caseStudySubtitle": "OkoPay与本地餐饮打造本地生活一体化支付解决方案",
+      "cases": {
+        "swifood": {
+          "title": "Swifood在线点餐和支付系统",
+          "description": "为本地餐饮提供完整的在线点餐和支付解决方案，支持多种支付方式，提升用户体验，增加营业额。",
+          "features": {
+            "qrOrder": "扫码点餐，无需排队",
+            "easyUse": "简单易用，提升营业效率",
+            "dataAnalysis": "数据分析，提升经营决策"
+          }
+        },
+        "offline": {
+          "title": "线下餐厅和商店的订单付款",
+          "description": "为线下商户提供便捷的收款解决方案，支持扫码支付、刷卡支付等多种方式",
+          "features": {
+            "multiPayment": "多种支付方式，满足不同需求",
+            "fastSettlement": "在线支付，快速结算",
+            "dataInsight": "数据分析，了解经营状况"
+          }
+        }
+      },
+      "ctaButton": "立即咨询"
+    },
+    "logistics": {
+      "title": "物流快递",
+      "subtitle": "物流快递全方位支付解决方案",
+      "description": "OkoPay物流支付全方位解决方案，整合多元支付、高效流程和卓越安全技术，提升用户体验。与物流企业紧密合作，追求技术创新与适应性，助力本地物流企业保持竞争力，实现高效、安全、创新的支付生态。",
+      "cta": "立即咨询",
+      "enhanceTitle": "提升",
+      "enhanceSubtitle": "东南亚本地物流支付效率解决方案",
+      "enhanceDesc": "OkoPay是一家位于东南亚的公司，利用新的支付技术使在线购物更加高效。他们使用QR码来减少现金交易，从而使卖家和送货公司更容易操作。如果客户不在家，他们可以通过送货人发送的链接进行支付。这个系统简化了支付流程，使得所有相关方都能更加便宜地进行交易。",
+      "caseStudyTitle": "成功案例",
+      "caseStudyDesc": "OkoPay 结合现代物流快递业务场景提供了多种支付可能性。更快捷的支付体验，赋能物流快递企业提效增收",
+      "cases": {
+        "cod": {
+          "title": "派件COD收款解决方案",
+          "description": "为快递员提供便捷的货到付款收款工具，支持扫码收款、现金转账，实时到账"
+        },
+        "proxy": {
+          "title": "包裹代收及支付解决方案",
+          "description": "客户不在家时，通过发送支付链接完成在线支付，简化收款流程"
+        },
+        "network": {
+          "title": "网点收款解决方案",
+          "description": "为物流网点提供多种收款方式，支持扫码、刷卡、现金等多种支付方式"
+        },
+        "receivable": {
+          "title": "KA应收账款解决方案",
+          "description": "为大客户提供专业的应收账款管理服务，自动对账、批量结算"
+        }
+      },
+      "ctaButton": "立即咨询"
+    }
+  },
+  "consult": {
+    "title": "咨询",
+    "subtitle": "为500多家东南亚商户提供快捷支付解决方案",
+    "features": {
+      "localized": {
+        "title": "本地化服务",
+        "description": "我们提供本地化全方位的支付解决方案定制服务，支持多国币种和支付方式。"
+      },
+      "api": {
+        "title": "API对接",
+        "description": "零开户费用、免费集成API解决方案、全程咨询服务和专业技术支持。"
+      },
+      "flexible": {
+        "title": "交易安全灵活",
+        "description": "本地收付到账快，交易成本低，成功率高。结算最快T+1,企业回款更灵活。"
+      },
+      "riskControl": {
+        "title": "风控严格把控",
+        "description": "严格的交易风控策略，为商户资金保驾护航，提升资金利用率，为您创收每一份财富。"
+      }
+    },
+    "form": {
+      "title": "立即开启高效支付之旅！",
+      "name": "姓名",
+      "namePlaceholder": "请填写您的姓名",
+      "email": "联系邮箱",
+      "emailPlaceholder": "请填写您的联系邮箱",
+      "phone": "联系号码",
+      "phonePlaceholder": "请填写您的联系号码",
+      "country": "国家或地区",
+      "company": "公司名称",
+      "companyPlaceholder": "请填写您的公司名称",
+      "inquiryType": "咨询内容",
+      "inquiryTypePlaceholder": "请选择",
+      "inquiryTypes": {
+        "payment": "支付接入",
+        "business": "商务合作",
+        "technical": "技术支持",
+        "other": "其他咨询"
+      },
+      "note": "备注",
+      "submit": "提交",
+      "required": "*",
+      "errors": {
+        "nameRequired": "请填写您的姓名",
+        "emailRequired": "请填写您的联系邮箱",
+        "emailInvalid": "邮箱格式不正确",
+        "phoneRequired": "请填写您的联系号码",
+        "countryRequired": "请选择国家或地区",
+        "companyRequired": "请填写您的公司名称",
+        "inquiryTypeRequired": "请选择咨询内容"
+      },
+      "submitSuccess": "提交成功！我们将尽快联系您",
+      "countries": {
+        "indonesia": "印度尼西亚",
+        "philippines": "菲律宾",
+        "malaysia": "马来西亚",
+        "thailand": "泰国",
+        "hongkong": "中国香港",
+        "mexico": "墨西哥",
+        "brazil": "巴西",
+        "dubai": "迪拜",
+        "other": "其他"
+      }
+    }
   }
 }

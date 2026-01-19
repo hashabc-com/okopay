@@ -1,9 +1,14 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+import { useI18n } from '@/i18n/i18n-context';
 import Image from 'next/image';
 
 export default function PricingPage() {
+  const { t } = useI18n();
+  
   return (
     <main>
       <Navbar />
@@ -17,10 +22,10 @@ export default function PricingPage() {
             {/* Left: Features */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-slate-900 mb-3">价格</h2>
-                <h3 className="text-2xl font-heading font-bold text-primary-600 mb-6">量身定制 价格方案</h3>
+                <h2 className="text-3xl font-heading font-bold text-slate-900 mb-3">{t('pricing.title')}</h2>
+                <h3 className="text-2xl font-heading font-bold text-primary-600 mb-6">{t('pricing.subtitle')}</h3>
                 <p className="text-slate-600 mb-8">
-                  OkoPay 系于2021年成立的跨境收款及本地支付解决方案公司，专注于为客户提供定制化金融解决方案。其植根于新兴市场，服务地区以东南亚、拉美、中东为主。
+                  {t('pricing.description')}
                 </p>
               </div>
 
@@ -34,8 +39,8 @@ export default function PricingPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">免费接入，多国可用</h4>
-                    <p className="text-slate-600">一次接入多国可用，助力快速全球化业务</p>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('pricing.features.freeAccess.title')}</h4>
+                    <p className="text-slate-600">{t('pricing.features.freeAccess.description')}</p>
                   </div>
                 </div>
 
@@ -48,8 +53,8 @@ export default function PricingPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">费率固定，灵活组合</h4>
-                    <p className="text-slate-600">价格公开透明，每一笔交易计费成本清晰明了</p>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('pricing.features.fixedRate.title')}</h4>
+                    <p className="text-slate-600">{t('pricing.features.fixedRate.description')}</p>
                   </div>
                 </div>
 
@@ -62,8 +67,8 @@ export default function PricingPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">支付本地化，费用极低</h4>
-                    <p className="text-slate-600">全球支付方案最优定价，为您降本增效</p>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('pricing.features.lowCost.title')}</h4>
+                    <p className="text-slate-600">{t('pricing.features.lowCost.description')}</p>
                   </div>
                 </div>
               </div>

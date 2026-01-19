@@ -2,46 +2,46 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useI18n } from "@/i18n/i18n-context";
 // import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function LocalPaymentPage() {
+  const { t } = useI18n();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const scenarios = [
     {
-      name: "货到付款",
+      name: t('products.localPayment.scenarios.cod.name'),
       icon: "📦",
-      description:
-        "OkoPay已经在菲律宾、印尼、泰国、马来与本地银行、持牌机构合作货币兑换业务，为OkoPay体系内的收单商户提供安全、合规、灵活的货币兑换服务",
+      description: t('products.localPayment.scenarios.cod.description'),
     },
     {
-      name: "旅行支付",
+      name: t('products.localPayment.scenarios.travel.name'),
       icon: "✈️",
-      description: "OkoPay 可以帮助您集成更安全的旅游行业支付解决方案",
+      description: t('products.localPayment.scenarios.travel.description'),
     },
     {
-      name: "酒店预订",
+      name: t('products.localPayment.scenarios.hotel.name'),
       icon: "🏨",
-      description: "OkoPay支持在线酒店支付系统整合，用户随时随地可下单",
+      description: t('products.localPayment.scenarios.hotel.description'),
     },
     {
-      name: "餐厅点餐",
+      name: t('products.localPayment.scenarios.restaurant.name'),
       icon: "🍽️",
-      description: "餐厅饭店集成线上点餐系统让您的业务更加灵活",
+      description: t('products.localPayment.scenarios.restaurant.description'),
     },
     {
-      name: "收费站",
+      name: t('products.localPayment.scenarios.toll.name'),
       icon: "🚗",
-      description:
-        "我们提供得来速服务，让您的客户无需离开车辆即可方便地完成交易",
+      description: t('products.localPayment.scenarios.toll.description'),
     },
     {
-      name: "网上送餐",
+      name: t('products.localPayment.scenarios.delivery.name'),
       icon: "🍔",
-      description:
-        "在线订购服务，使用户能够通过无缝的数字平台方便地订购和接收他们最喜欢的餐点",
+      description: t('products.localPayment.scenarios.delivery.description'),
     },
   ];
 
@@ -58,20 +58,20 @@ export default function LocalPaymentPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
-                本地收单
+                {t('products.localPayment.title')}
               </h1>
               <p className="text-2xl text-primary-600 font-semibold mb-6">
-                极速收单，资金到账更快
+                {t('products.localPayment.subtitle')}
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                OkoPay为本地企业提供快捷高效的收单解决方案，满足多场景的支付需求，提升支付成功率，保障交易安全，提供更好的用户体验。
+                {t('products.localPayment.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
             <div className="relative">
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
@@ -93,10 +93,10 @@ export default function LocalPaymentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
-              更多的应用场景
+              {t('products.localPayment.moreScenarios')}
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              OkoPay提供网页/手机端付款界面，企业主无需开发即可高效整合适配不同渠道（例如QRcode、网上银行、柜台银行、支付中心和电子钱包）更方便地接受付款。
+              {t('products.localPayment.scenariosDesc')}
             </p>
           </div>
 
@@ -119,10 +119,10 @@ export default function LocalPaymentPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                支付链接
+                {t('products.localPayment.paymentLink.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                我们为本地商户提供安全便捷的支付选择，无论是在线还是线下，我们与本地渠道合作，以迅速结算资金，确保及时支付，满足他们的需求。
+                {t('products.localPayment.paymentLink.description')}
               </p>
             </div>
 
@@ -144,10 +144,10 @@ export default function LocalPaymentPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                在线支付
+                {t('products.localPayment.onlinePayment.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                我们通过使用社交媒体、搜索引擎优化和本地广告等本地化营销工具，帮助本地商户吸引更多客户，提升在社区中的知名度。
+                {t('products.localPayment.onlinePayment.description')}
               </p>
             </div>
 
@@ -169,10 +169,10 @@ export default function LocalPaymentPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                API对接
+                {t('products.localPayment.apiIntegration.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                我们为本地商户提供快速可靠的物流服务，通过与本地公司合作，确保及时送达，提升整体顾客购物体验。
+                {t('products.localPayment.apiIntegration.description')}
               </p>
             </div>
           </div>
@@ -184,10 +184,10 @@ export default function LocalPaymentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
-              服务场景
+              {t('products.localPayment.serviceScenarios')}
             </h2>
             <p className="text-lg text-slate-600">
-              我们通过线上和线下多种方式提升收款效率
+              {t('products.localPayment.serviceScenariosDesc')}
             </p>
           </div>
 

@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useI18n } from '@/i18n/i18n-context';
+import Link from 'next/link';
 
 // Collapsible Item Component
 function CollapsibleItem({ title, content }: { title: string; content: string }) {
@@ -35,6 +37,7 @@ function CollapsibleItem({ title, content }: { title: string; content: string })
 }
 
 export default function DisbursementPage() {
+  const { t } = useI18n();
   const [activeTab, setActiveTab] = useState('philippines');
 
   return (
@@ -47,26 +50,26 @@ export default function DisbursementPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
-                本地代付
+                {t('products.disbursement.title')}
               </h1>
               <p className="text-2xl text-primary-600 font-semibold mb-6">
-                极速打款，安全高效
+                {t('products.disbursement.subtitle')}
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                OkoPay为企业提供随时随地转账业务，支持电子钱包、信用卡或借记卡多方式转账，确保运营资金周转灵活，提供安全保障。
+                {t('products.disbursement.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
             <div className="relative">
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
                 <Image 
                   src="/products/disbursment_1.webp"
-                  alt="本地代付"
+                  alt="Local Disbursement"
                   fill
                   className="object-contain"
                   priority
@@ -84,21 +87,21 @@ export default function DisbursementPage() {
             {/* Left: Title and Collapsible Sections */}
             <div className="lg:sticky lg:top-24">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
-                快速、安全，实时打款
+                {t('products.disbursement.fastPaymentTitle')}
               </h2>
               <p className="text-base text-slate-600 mb-6 leading-relaxed">
-                OkoPay支持包括本地银行卡、电子钱包、网银支付等多种打款方式，覆盖菲律宾，印度尼西亚，泰国，马来西亚等多个国家，支持自动批量转账，高安全性、高成功率、高灵活性为打款交易保驾护航。
+                {t('products.disbursement.fastSecureDesc')}
               </p>
 
               {/* Collapsible Sections */}
               <div className="space-y-2">
                 {[
-                  { title: '支付渠道', content: '本地银行账户、电子钱包、实体便利店、当铺等' },
-                  { title: '支付方式', content: '可以选择手动或API批量打款' },
-                  { title: '小额代付', content: '支持金额、网络游戏、零售业和转账类型服务的小额代付' },
-                  { title: '大额代付', content: '贸易支付、代发工资、企业转账' },
-                  { title: '支付货币', content: '支持多种货币结算' },
-                  { title: '到账时间', content: '实时到账，快速便捷' }
+                  { title: t('products.disbursement.features.channel.title'), content: t('products.disbursement.features.channel.description') },
+                  { title: t('products.disbursement.features.method.title'), content: t('products.disbursement.features.method.description') },
+                  { title: t('products.disbursement.features.smallAmount.title'), content: t('products.disbursement.features.smallAmount.description') },
+                  { title: t('products.disbursement.features.largeAmount.title'), content: t('products.disbursement.features.largeAmount.description') },
+                  { title: t('products.disbursement.features.currency.title'), content: t('products.disbursement.features.currency.description') },
+                  { title: t('products.disbursement.features.arrival.title'), content: t('products.disbursement.features.arrival.description') }
                 ].map((item, index) => (
                   <CollapsibleItem key={index} title={item.title} content={item.content} />
                 ))}
@@ -111,10 +114,10 @@ export default function DisbursementPage() {
               <div className="mb-6">
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { id: 'philippines', name: '菲律宾' },
-                    { id: 'indonesia', name: '印度尼西亚' },
-                    { id: 'malaysia', name: '马来西亚' },
-                    { id: 'thailand', name: '泰国' }
+                    { id: 'philippines', name: t('products.disbursement.countryTabs.philippines') },
+                    { id: 'indonesia', name: t('products.disbursement.countryTabs.indonesia') },
+                    { id: 'malaysia', name: t('products.disbursement.countryTabs.malaysia') },
+                    { id: 'thailand', name: t('products.disbursement.countryTabs.thailand') }
                   ].map((tab) => (
                     <button
                       key={tab.id}
@@ -135,9 +138,9 @@ export default function DisbursementPage() {
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-xl border border-primary-100">
                 {/* Bank Payment Section */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">银行打款</h3>
+                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">{t('products.disbursement.bankPayment')}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    我们与{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}当地多家当地银行建立直连合作关系，支持主流银行打款，资金安全打款成功率极高，费用低廉。
+                    {t('products.disbursement.bankPaymentDesc').replace('{country}', activeTab === 'philippines' ? t('products.disbursement.countryTabs.philippines') : activeTab === 'indonesia' ? t('products.disbursement.countryTabs.indonesia') : activeTab === 'malaysia' ? t('products.disbursement.countryTabs.malaysia') : t('products.disbursement.countryTabs.thailand'))}
                   </p>
                   
                   {/* Bank Icons */}
@@ -204,14 +207,14 @@ export default function DisbursementPage() {
                       </>
                     )}
                   </div>
-                  <p className="text-sm text-primary-600 font-medium">更多支持...</p>
+                  <p className="text-sm text-primary-600 font-medium">{t('products.disbursement.moreSupport')}</p>
                 </div>
 
                 {/* E-Wallet Section */}
                 <div>
-                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">电子钱包</h3>
+                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">{t('products.disbursement.eWallet')}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    我们支持支付到{activeTab === 'philippines' ? '菲律宾' : activeTab === 'indonesia' ? '印度尼西亚' : activeTab === 'malaysia' ? '马来西亚' : '泰国'}流行的电子钱包，满足客户的直接充值需求。
+                    {t('products.disbursement.eWalletDesc').replace('{country}', activeTab === 'philippines' ? t('products.disbursement.countryTabs.philippines') : activeTab === 'indonesia' ? t('products.disbursement.countryTabs.indonesia') : activeTab === 'malaysia' ? t('products.disbursement.countryTabs.malaysia') : t('products.disbursement.countryTabs.thailand'))}
                   </p>
                   
                   {/* E-Wallet Icons */}
@@ -266,7 +269,7 @@ export default function DisbursementPage() {
                       </>
                     )}
                   </div>
-                  <p className="text-sm text-primary-600 font-medium">更多支持...</p>
+                  <p className="text-sm text-primary-600 font-medium">{t('products.disbursement.moreSupport')}</p>
                 </div>
               </div>
             </div>
@@ -279,10 +282,10 @@ export default function DisbursementPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
-              更多应用场景
+              {t('products.disbursement.scenariosTitle')}
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              本地资金代付，可通过自动化批量打款操作，实现低费用、减少财务核对工作，提高企业财务处理效率，降低支付成本，助力企业运营高效化。
+              {t('products.disbursement.scenariosDesc')}
             </p>
           </div>
 
@@ -295,8 +298,8 @@ export default function DisbursementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">企业工资代付</h3>
-                <p className="text-slate-600 leading-relaxed">批量发放员工工资，提高财务处理效率</p>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{t('products.disbursement.scenarios.salary.title')}</h3>
+                <p className="text-slate-600 leading-relaxed">{t('products.disbursement.scenarios.salary.description')}</p>
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
@@ -305,8 +308,8 @@ export default function DisbursementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">供应商货款代付</h3>
-                <p className="text-slate-600 leading-relaxed">快速结算供应商款项，保持良好合作关系</p>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{t('products.disbursement.scenarios.supplier.title')}</h3>
+                <p className="text-slate-600 leading-relaxed">{t('products.disbursement.scenarios.supplier.description')}</p>
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
@@ -315,8 +318,8 @@ export default function DisbursementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">商户交易，退款业务</h3>
-                <p className="text-slate-600 leading-relaxed">处理商户交易退款，提升用户体验</p>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{t('products.disbursement.scenarios.refund.title')}</h3>
+                <p className="text-slate-600 leading-relaxed">{t('products.disbursement.scenarios.refund.description')}</p>
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
@@ -325,8 +328,8 @@ export default function DisbursementPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">实时转账/取款</h3>
-                <p className="text-slate-600 leading-relaxed">支持用户实时转账和取款需求</p>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{t('products.disbursement.scenarios.withdrawal.title')}</h3>
+                <p className="text-slate-600 leading-relaxed">{t('products.disbursement.scenarios.withdrawal.description')}</p>
               </div>
             </div>
 
@@ -335,7 +338,7 @@ export default function DisbursementPage() {
               <div className="relative w-full h-[550px] rounded-2xl overflow-hidden top-18">
                 <Image 
                   src="/products/disbursments_3.webp"
-                  alt="应用场景"
+                  alt="Application Scenarios"
                   fill
                   className="object-contain"
                 />

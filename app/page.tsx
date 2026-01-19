@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useI18n } from "@/i18n/i18n-context";
 
 export default function Home() {
+  const { t } = useI18n();
+  
   const licenses = [
     { name: "PJP3", icon: "/home/icon1.png" },
     { name: "VASP", icon: "/home/icon2.png" },
@@ -44,16 +46,16 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-8 animate-fade-in">
               <h1 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
-                值得信赖的本地支付服务专家
+                {t('home.hero.title')}
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed">
-                OkoPay - 您的本地支付解决方案专家
+                {t('home.hero.subtitle')}
               </p>
               <Link
                 href="/about/consult"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
+                {t('nav.getStarted')}
               </Link>
             </div>
 
@@ -76,11 +78,10 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
-              <span className="text-primary-600">牌照齐全</span>{" "}
-              <span className="text-primary-600">本地</span>直连
+              {t('home.licenses.title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              在东南亚，我们拥有官方牌照，凭借合规资质为每笔交易提供安全、高效、合法的保障，让您的企业无论身在何处都能放心收付款
+              {t('home.licenses.description')}
             </p>
           </div>
 
@@ -145,12 +146,10 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-8">
               <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 leading-tight">
-                <span className="text-primary-600">全球</span> 支付方案
-                <br />
-                <span className="text-primary-600">本地</span> 服务
+                {t('home.services.title')}
               </h2>
               <p className="text-xl text-slate-600 leading-relaxed">
-                东南亚便捷支付伙伴合作首选！持有海外支付牌照，为用户提供丰富的支付体验
+                {t('home.services.subtitle')}
               </p>
             </div>
 
@@ -173,11 +172,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
-                  支付本地化，0费用开户
+                  {t('home.services.local.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-semibold">本地化</span>
-                  支付交易，费用低更快捷高效
+                  {t('home.services.local.description')}
                 </p>
               </div>
 
@@ -198,11 +196,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
-                  多元支付渠道，成功率高
+                  {t('home.services.channels.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-semibold">支持</span>
-                  跨银行、支付中心、电子钱包和二维码支付的多种支付渠道。
+                  {t('home.services.channels.description')}
                 </p>
               </div>
 
@@ -223,12 +220,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
-                  本地结算，更具成本效益
+                  {t('home.services.cost.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  支持跨银行、支付中心、电子钱包和二维码等形式的多种支付渠道。
-                  <span className="text-primary-600 font-semibold">本地结算</span>
-                  ，交易费用更具成本效益。
+                  {t('home.services.cost.description')}
                 </p>
               </div>
 
@@ -249,11 +244,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-heading font-semibold mb-3 text-slate-900">
-                  24/7自助查询，终身一对一服务
+                  {t('home.services.support.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-semibold">个性化</span>{" "}
-                  VIP 支持从开户到上线，24 小时访问交易信息。
+                  {t('home.services.support.description')}
                 </p>
               </div>
             </div>
@@ -263,7 +257,7 @@ export default function Home() {
 
       <Footer />
 
-      <style jsx global>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes scroll {
           0% {
             transform: translateX(0);
@@ -278,7 +272,7 @@ export default function Home() {
         .animate-scroll:hover {
           animation-play-state: paused;
         }
-      `}</style>
+      `}} />
     </main>
   );
 }

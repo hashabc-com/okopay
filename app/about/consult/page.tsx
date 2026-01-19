@@ -1,8 +1,13 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+import { useI18n } from '@/i18n/i18n-context';
 
 export default function ConsultPage() {
+  const { t } = useI18n();
+  
   return (
     <main>
       <Navbar />
@@ -14,9 +19,9 @@ export default function ConsultPage() {
             {/* Left: Info */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-4xl font-heading font-bold text-slate-900 mb-6">咨询</h1>
+                <h1 className="text-4xl font-heading font-bold text-slate-900 mb-6">{t('consult.title')}</h1>
                 <h2 className="text-2xl font-heading font-bold text-primary-600 mb-6">
-                  为500多家<br />东南亚商户提供快捷支付解决方案
+                  {t('consult.subtitle')}
                 </h2>
               </div>
 
@@ -30,9 +35,9 @@ export default function ConsultPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">本地化服务</h4>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('consult.features.localized.title')}</h4>
                     <p className="text-slate-600">
-                      我们提供本地化全方位的支付解决方案定制服务，支持多国币种和支付方式。
+                      {t('consult.features.localized.description')}
                     </p>
                   </div>
                 </div>
@@ -46,9 +51,9 @@ export default function ConsultPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">API对接</h4>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('consult.features.api.title')}</h4>
                     <p className="text-slate-600">
-                      零开户费用、免费集成API解决方案、全程咨询服务和专业技术支持。
+                      {t('consult.features.api.description')}
                     </p>
                   </div>
                 </div>
@@ -62,9 +67,9 @@ export default function ConsultPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">交易安全灵活</h4>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('consult.features.flexible.title')}</h4>
                     <p className="text-slate-600">
-                      本地收付到账快，交易成本低，成功率高。结算最快T+1,企业回款更灵活。
+                      {t('consult.features.flexible.description')}
                     </p>
                   </div>
                 </div>
@@ -78,9 +83,9 @@ export default function ConsultPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-slate-900 mb-2">风控严格把控</h4>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">{t('consult.features.riskControl.title')}</h4>
                     <p className="text-slate-600">
-                      严格的交易风控策略，为商户资金保驾护航，提升资金利用率，为您创收每一份财富。
+                      {t('consult.features.riskControl.description')}
                     </p>
                   </div>
                 </div>

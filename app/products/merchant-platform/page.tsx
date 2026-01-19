@@ -4,8 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
+import { useI18n } from "@/i18n/i18n-context";
+import Link from "next/link";
 
 export default function MerchantPlatformPage() {
+  const { t } = useI18n();
+  
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -16,20 +20,20 @@ export default function MerchantPlatformPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
-                商户管理平台
+                {t('products.merchantPlatform.title')}
               </h1>
               <p className="text-2xl text-primary-600 font-semibold mb-6">
-                全方位的商户服务管理系统
+                {t('products.merchantPlatform.subtitle')}
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                提供完善的商户后台管理系统，实时查看交易数据，管理订单，统计分析，让业务运营更高效。多维度数据报表，助您洞察业务增长点。
+                {t('products.merchantPlatform.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
             <div className="relative">
               <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
@@ -56,13 +60,12 @@ export default function MerchantPlatformPage() {
             {/* Left: Content */}
             <div className="space-y-8">
               <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 leading-tight">
-                <span className="text-primary-600">智能的运营管理系统</span>
+                <span className="text-primary-600">{t('products.merchantPlatform.smartManagement')}</span>
                 <br />
-                让资金运营<span className="text-primary-600">更灵活</span>
+                {t('products.merchantPlatform.smartManagementDesc')}<span className="text-primary-600"></span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                OkoPay
-                利用智能数据工具合理优化商户资金使用运营方案，适应业务需求，高效配置，提升整体财务管理及运营。
+                {t('products.merchantPlatform.smartManagementDetail')}
               </p>
             </div>
 
@@ -86,11 +89,10 @@ export default function MerchantPlatformPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  资金管理
+                  {t('products.merchantPlatform.gridFeatures.fundManagementTitle')}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-medium">实时查看</span>
-                  账户资金，随时调配，灵活解决资金周转压力。轻松应对经营需求，提升财务灵活性。
+                  {t('products.merchantPlatform.gridFeatures.fundManagementDesc')}
                 </p>
               </div>
 
@@ -112,11 +114,10 @@ export default function MerchantPlatformPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  自动结算
+                  {t('products.merchantPlatform.gridFeatures.autoSettlementTitle')}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-medium">实时处理</span>
-                  交易款项，简化财务流程，为您提供便捷、精确的结算服务，省时省力。
+                  {t('products.merchantPlatform.gridFeatures.autoSettlementDesc')}
                 </p>
               </div>
 
@@ -138,11 +139,10 @@ export default function MerchantPlatformPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  多账号管理
+                  {t('products.merchantPlatform.gridFeatures.multiAccountTitle')}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-medium">多账号</span>
-                  管理服务简化您的运营，集中管理多个账户，提升效率。通过统一平台，轻松监控、调整，实现更便捷的商户账户管理。
+                  {t('products.merchantPlatform.gridFeatures.multiAccountDesc')}
                 </p>
               </div>
 
@@ -164,11 +164,10 @@ export default function MerchantPlatformPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  24/7服务
+                  {t('products.merchantPlatform.gridFeatures.support247Title')}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-primary-600 font-medium">我们提供</span>
-                  7/24小时全天候服务，确保您随时获得所需支持。无论何时何地，我们都致力于解决您的问题，保障您的顺畅运营。
+                  {t('products.merchantPlatform.gridFeatures.support247Desc')}
                 </p>
               </div>
             </div>
@@ -181,10 +180,10 @@ export default function MerchantPlatformPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-heading font-bold text-slate-900">
-                <span className="text-primary-600">商户入驻</span> 合作流程
+                {t('products.merchantPlatform.onboardingTitle')}
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                OkoPay通过清晰高效的结算流程确保与商家的金融交易顺利进行，提高可靠性和满意度。
+                {t('products.merchantPlatform.onboardingDesc')}
               </p>
             </div>
             <div className="relative w-full h-[320px] md:h-[420px] lg:h-[480px]">

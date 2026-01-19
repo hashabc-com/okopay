@@ -1,8 +1,13 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/i18n-context';
+import Link from 'next/link';
 
 export default function LogisticsPage() {
+  const { t } = useI18n();
   return (
     <main>
       <Navbar />
@@ -13,26 +18,26 @@ export default function LogisticsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-6">
-                物流快递
+                {t('solutions.logistics.title')}
               </h1>
               <h2 className="text-2xl lg:text-3xl text-slate-700 font-semibold mb-4">
-                物流快递全方位支付解决方案
+                {t('solutions.logistics.subtitle')}
               </h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                OkoPay物流支付全方位解决方案，整合多元支付、高效流程和卓越安全技术，提升用户体验。与物流企业紧密合作，追求技术创新与适应性，助力本地物流企业保持竞争力，实现高效、安全、创新的支付生态。
+                {t('solutions.logistics.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
             <div className="relative">
               <div className="relative overflow-hidden">
                 <Image
                   src="/solutions/express_delivery_1.webp"
-                  alt="物流快递支付解决方案"
+                  alt="Logistics Payment Solutions"
                   width={600}
                   height={500}
                   className="w-full h-auto"
@@ -49,10 +54,10 @@ export default function LogisticsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
-              提升
+              {t('solutions.logistics.enhanceTitle')}
             </h2>
             <p className="text-2xl text-slate-700 font-semibold mb-4">
-              东南亚本地物流支付效率解决方案
+              {t('solutions.logistics.enhanceSubtitle')}
             </p>
           </div>
 
@@ -60,7 +65,7 @@ export default function LogisticsPage() {
             <div>
               <Image
                 src="/solutions/express_delivery_2.webp"
-                alt="东南亚本地物流支付效率"
+                alt="Southeast Asia Local Logistics Payment Efficiency"
                 width={600}
                 height={400}
                 className="w-full h-auto rounded-2xl"
@@ -68,7 +73,7 @@ export default function LogisticsPage() {
             </div>
             <div>
               <p className="text-lg text-slate-600 leading-relaxed">
-                OkoPay是一家位于东南亚的公司，利用新的支付技术使在线购物更加高效。他们使用QR码来减少现金交易，从而使卖家和送货公司更容易操作。如果客户不在家，他们可以通过送货人发送的链接进行支付。这个系统简化了支付流程，使得所有相关方都能更加便宜地进行交易。
+                {t('solutions.logistics.enhanceDesc')}
               </p>
             </div>
           </div>
@@ -90,10 +95,10 @@ export default function LogisticsPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
-              成功案例
+              {t('solutions.logistics.caseStudyTitle')}
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              OkoPay 结合现代物流快递业务场景提供了多种支付可能性。更快捷的支付体验，赋能物流快递企业提效增收
+              {t('solutions.logistics.caseStudyDesc')}
             </p>
           </div>
 
@@ -102,46 +107,46 @@ export default function LogisticsPage() {
             <div className="space-y-6">
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  派件COD收款解决方案
+                  {t('solutions.logistics.cases.cod.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  为快递员提供便捷的货到付款收款工具，支持扫码收款、现金转账，实时到账
+                  {t('solutions.logistics.cases.cod.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  包裹代收及支付解决方案
+                  {t('solutions.logistics.cases.proxy.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  客户不在家时，通过发送支付链接完成在线支付，简化收款流�?
+                  {t('solutions.logistics.cases.proxy.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  网点收款解决方案
+                  {t('solutions.logistics.cases.network.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  为物流网点提供多种收款方式，支持扫码、刷卡、现金等多种支付方式
+                  {t('solutions.logistics.cases.network.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  KA应收账款解决方案
+                  {t('solutions.logistics.cases.receivable.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  为大客户提供专业的应收账款管理服务，自动对账、批量结算
+                  {t('solutions.logistics.cases.receivable.description')}
                 </p>
               </div>
 
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
 
             {/* Image */}
@@ -149,7 +154,7 @@ export default function LogisticsPage() {
               <div className="relative overflow-hidden">
                 <Image
                   src="/solutions/express_delivery_3.webp"
-                  alt="物流快递成功案例"
+                  alt="Logistics Success Stories"
                   width={600}
                   height={700}
                   className="w-full h-auto"

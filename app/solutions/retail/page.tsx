@@ -1,8 +1,14 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/i18n-context';
+import Link from 'next/link';
 
 export default function RetailPage() {
+  const { t } = useI18n();
+  
   return (
     <main>
       <Navbar />
@@ -13,26 +19,26 @@ export default function RetailPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-6">
-                零售行业
+                {t('solutions.retail.title')}
               </h1>
               <h2 className="text-2xl lg:text-3xl text-slate-700 font-semibold mb-4">
-                零售业<br />一体化支付解决方案
+                {t('solutions.retail.subtitle')}
               </h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                OkoPay 致力助推东南亚零售，构建一体化支付解决方案，确保安全与便捷。借创新科技，提供可靠支付，创造高效安全交易体验，加强零售行业生态稳健发展。
+                {t('solutions.retail.description')}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
             <div className="relative">
               <div className="relative overflow-hidden">
                 <Image
                   src="/solutions/business_1.webp"
-                  alt="零售行业支付解决方案"
+                  alt="Retail Payment Solutions"
                   width={600}
                   height={500}
                   className="w-full h-auto"
@@ -49,13 +55,13 @@ export default function RetailPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
-              助力
+              {t('solutions.retail.empowerTitle')}
             </h2>
             <p className="text-2xl text-slate-700 font-semibold mb-8">
-              东南亚零售行业，打造更安全易操作的支付解决方案
+              {t('solutions.retail.empowerSubtitle')}
             </p>
             <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              OkoPay整合先进技术，为零售商提供东南亚主流支付，保障安全，简化操作。智能支付系统提升用户体验，实现便捷购物。持续优化防欺诈，确保交易安全。致力于与零售商共同打造数字支付新标准，促进业务增长。
+              {t('solutions.retail.empowerDesc')}
             </p>
           </div>
 
@@ -67,9 +73,9 @@ export default function RetailPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">一站式支付服务</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{t('solutions.retail.features.oneStop.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                OkoPay提供先进的支付系统，提供多样选择，满足不同消费者的支付需求。集成线上线下的交易形式，商户可迅速开展营收业务。
+                {t('solutions.retail.features.oneStop.description')}
               </p>
             </div>
 
@@ -80,9 +86,9 @@ export default function RetailPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">支付安全保障</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{t('solutions.retail.features.security.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                采用先进的加密技术和安全措施，保护用户的支付信息和资金安全。同时，建立高效的欺诈检测系统，及时发现和处理欺诈行为，降低风险。
+                {t('solutions.retail.features.security.description')}
               </p>
             </div>
 
@@ -94,9 +100,9 @@ export default function RetailPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">深化用户支付体验</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{t('solutions.retail.features.experience.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                搭建智能支付系统，提升用户在购物过程中的体验，实现更便捷、高效的支付流程。基于数字化交易更深入了解用户购物需求，提供更好的决策方案。
+                {t('solutions.retail.features.experience.description')}
               </p>
             </div>
 
@@ -107,9 +113,9 @@ export default function RetailPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">多种支付终端</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{t('solutions.retail.features.terminals.title')}</h3>
               <p className="text-slate-600 leading-relaxed">
-                支付本地化，满足当地多种支付终端，均适配手机、PC、平板等设备，可实现线上线下交易模式。
+                {t('solutions.retail.features.terminals.description')}
               </p>
             </div>
           </div>
@@ -121,10 +127,10 @@ export default function RetailPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6">
-              成功案例
+              {t('solutions.retail.caseStudyTitle')}
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              丰富服务场景，满足更广泛需求
+              {t('solutions.retail.caseStudySubtitle')}
             </p>
           </div>
 
@@ -133,46 +139,46 @@ export default function RetailPage() {
             <div className="space-y-6">
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-slate-100">
                 <h3 className="text-2xl font-bold text-primary-600 mb-4">
-                  加盟�?
+                  {t('solutions.retail.cases.franchise.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  我们为加盟店定制支付解决方案，确保交易顺畅并提高财务管理运营效率
+                  {t('solutions.retail.cases.franchise.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-slate-100">
                 <h3 className="text-2xl font-bold text-primary-600 mb-4">
-                  便利店
+                  {t('solutions.retail.cases.convenience.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  OkoPay通过专门支付解决方案简化了便利店的交易和财务结算
+                  {t('solutions.retail.cases.convenience.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-slate-100">
                 <h3 className="text-2xl font-bold text-primary-600 mb-4">
-                  商店
+                  {t('solutions.retail.cases.store.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  我们为商场门店提供量身定制的支付解决方案，提高交易效率和丰富支付方式
+                  {t('solutions.retail.cases.store.description')}
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-slate-100">
                 <h3 className="text-2xl font-bold text-primary-600 mb-4">
-                  市场
+                  {t('solutions.retail.cases.market.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  OkoPay不断简化支付流程，以提高商家和客户的支付便利性和高效性
+                  {t('solutions.retail.cases.market.description')}
                 </p>
               </div>
 
-              <a
-                href="#contact"
-                className="inline-flex px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <Link
+                href="/about/consult"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                立即咨询
-              </a>
+                {t('nav.getStarted')}
+              </Link>
             </div>
 
             {/* Image */}
@@ -180,7 +186,7 @@ export default function RetailPage() {
               <div className="relative overflow-hidden">
                 <Image
                   src="/solutions/business_3.webp"
-                  alt="零售行业成功案例"
+                  alt="Retail Success Stories"
                   width={600}
                   height={700}
                   className="w-full h-auto"

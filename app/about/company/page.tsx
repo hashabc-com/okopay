@@ -1,7 +1,12 @@
+'use client';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useI18n } from '@/i18n/i18n-context';
 
 export default function CompanyPage() {
+  const { t } = useI18n();
+  
   return (
     <main>
       <Navbar />
@@ -10,10 +15,10 @@ export default function CompanyPage() {
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-heading font-bold text-slate-900 mb-6">
-            关于我们
+            {t('company.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            值得信赖的本地支付服务专家
+            {t('company.subtitle')}
           </p>
         </div>
       </section>
@@ -24,26 +29,26 @@ export default function CompanyPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-4xl font-heading font-bold text-slate-900 mb-6">
-                OkoPay - 您的本地支付解决方案专家
+                {t('company.intro.title')}
               </h2>
               <p className="text-lg text-slate-600 mb-4">
-                OkoPay致力于为全球企业提供专业、安全、高效的支付解决方案。我们深耕东南亚市场，持有多个国家和地区的官方支付牌照，为客户提供合规、可靠的支付服务。
+                {t('company.intro.description1')}
               </p>
               <p className="text-lg text-slate-600 mb-4">
-                我们的使命是让跨境支付变得简单、快捷、安全，帮助企业轻松拓展全球业务，让每一笔交易都能快速、安全地完成。
+                {t('company.intro.description2')}
               </p>
             </div>
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-semibold text-slate-900 mb-6">核心优势</h3>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-6">{t('company.advantages.title')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <svg className="w-6 h-6 text-primary-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <div>
-                      <h4 className="font-semibold text-slate-900">牌照齐全</h4>
-                      <p className="text-slate-600">持有多个国家和地区的官方支付牌照</p>
+                      <h4 className="font-semibold text-slate-900">{t('company.advantages.fullLicense.title')}</h4>
+                      <p className="text-slate-600">{t('company.advantages.fullLicense.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -51,8 +56,8 @@ export default function CompanyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <div>
-                      <h4 className="font-semibold text-slate-900">本地直连</h4>
-                      <p className="text-slate-600">与本地支付渠道直接合作，确保高成功率</p>
+                      <h4 className="font-semibold text-slate-900">{t('company.advantages.localConnection.title')}</h4>
+                      <p className="text-slate-600">{t('company.advantages.localConnection.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -60,8 +65,8 @@ export default function CompanyPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <div>
-                      <h4 className="font-semibold text-slate-900">7x24服务</h4>
-                      <p className="text-slate-600">全天候客户服务，及时响应您的需求</p>
+                      <h4 className="font-semibold text-slate-900">{t('company.advantages.support247.title')}</h4>
+                      <p className="text-slate-600">{t('company.advantages.support247.description')}</p>
                     </div>
                   </div>
                 </div>
@@ -76,10 +81,10 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">
-              牌照资质
+              {t('company.licenses.title')}
             </h2>
             <p className="text-lg text-slate-600">
-              在东南亚，我们持有官方牌照，凭借合规资质为每笔交易提供安全、高效、合法的保障
+              {t('company.licenses.description')}
             </p>
           </div>
 
@@ -111,10 +116,10 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-4">
-              合作伙伴
+              {t('company.partners.title')}
             </h2>
             <p className="text-lg text-slate-600">
-              与全球知名企业建立战略合作关系
+              {t('company.partners.description')}
             </p>
           </div>
 
