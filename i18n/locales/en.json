@@ -703,6 +703,7 @@
       },
       "note": "Note",
       "submit": "Submit",
+      "submitting": "Submitting...",
       "required": "*",
       "errors": {
         "nameRequired": "Please enter your name",
@@ -714,6 +715,7 @@
         "inquiryTypeRequired": "Please select inquiry type"
       },
       "submitSuccess": "Submitted successfully! We will contact you soon",
+      "submitError": "Submission failed, please try again later",
       "countries": {
         "indonesia": "Indonesia",
         "philippines": "Philippines",

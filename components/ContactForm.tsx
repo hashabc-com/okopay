@@ -29,6 +29,21 @@ export default function ContactForm() {
     { label: t('consult.form.countries.other'), code: 'OTHER', flag: '/country/icon_country_other.png' },
   ];
 
+  // 咨询类型中文映射（无论当前语言是什么，始终传中文给后端）
+  const INQUIRY_TYPES_ZH: Record<string, string> = {
+    'Business Consultation': '业务咨询',
+    'Account Opening Inquiry': '开户咨询',
+    'Get a Quote': '获取报价',
+    'Other Inquiries': '其他',
+    'Quote Request': '报价咨询',
+    'Other': '其他',
+    '业务咨询': '业务咨询',
+    '开户咨询': '开户咨询',
+    '获取报价': '获取报价',
+    '报价咨询': '报价咨询',
+    '其他': '其他',
+  };
+
   const PHONE_PREFIXES = [
     { code: '+86', label: 'CN +86' },
     { code: '+62', label: 'ID +62' },
@@ -59,6 +74,7 @@ export default function ContactForm() {
   });
 
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -95,12 +111,73 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 获取国家代码（从label转换为code）
+  const getCountryCodes = (countryLabels: string[]): string => {
+    const codes = countryLabels.map(label => {
+      const country = COUNTRIES.find(c => c.label === label);
+      return country?.code || '';
+    }).filter(Boolean);
+    return codes.join(',');
+  };
+
+  // 调用后端API（通过Next.js API Route避免跨域）
+  const submitToBackend = async (data: FormData) => {
+    const payload = {
+      contactPerson: data.name,
+      countryCode: data.phonePrefix.replace('+', ''),
+      phone: data.phone,
+      email: data.email,
+      company: data.company,
+      source: 'web',
+      country: getCountryCodes(data.countries),
+      consultContent: INQUIRY_TYPES_ZH[data.inquiryType] || data.inquiryType,
+      remark: data.note,
+    };
+
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (response.status !== 200) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to submit form');
+    }
+
+    return response.json();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      console.log('Form submitted:', formData);
+    if (!validate()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await submitToBackend(formData);
       alert(t('consult.form.submitSuccess'));
-      // Reset form or redirect
+      
+      // 重置表单
+      setFormData({
+        name: '',
+        email: '',
+        phonePrefix: '+86',
+        phone: '',
+        countries: [],
+        company: '',
+        inquiryType: '',
+        note: '',
+      });
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert(t('consult.form.submitError') || '提交失败，请稍后重试');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -290,9 +367,10 @@ export default function ContactForm() {
         {/* 提交按钮 */}
         <button
           type="submit"
-          className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:-translate-y-0.5"
+          disabled={isSubmitting}
+          className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
-          {t('consult.form.submit')}
+          {isSubmitting ? (t('consult.form.submitting') || '提交中...') : t('consult.form.submit')}
         </button>
       </form>
     </div>

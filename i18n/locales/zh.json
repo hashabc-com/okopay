@@ -703,6 +703,7 @@
       },
       "note": "备注",
       "submit": "提交",
+      "submitting": "提交中...",
       "required": "*",
       "errors": {
         "nameRequired": "请填写您的姓名",
@@ -714,6 +715,7 @@
         "inquiryTypeRequired": "请选择咨询内容"
       },
       "submitSuccess": "提交成功！我们将尽快联系您",
+      "submitError": "提交失败，请稍后重试",
       "countries": {
         "indonesia": "印度尼西亚",
         "philippines": "菲律宾",
