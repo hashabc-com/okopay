@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useI18n } from "@/i18n/i18n-context";
 import Link from "next/link";
 
+// 测试
+
 export default function PaymentMethodPage() {
   const { t } = useI18n();
   
