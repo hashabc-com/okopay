@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Open_Sans, Poppins } from 'next/font/google';
 import './globals.css';
 import { I18nProvider } from '@/i18n/i18n-context';
+import FloatingTelegramButton from '@/components/FloatingTelegramButton';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
         <I18nProvider>
           {children}
         </I18nProvider>
+        <FloatingTelegramButton />
       </body>
     </html>
   );

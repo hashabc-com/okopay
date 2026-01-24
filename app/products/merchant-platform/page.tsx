@@ -37,13 +37,14 @@ export default function MerchantPlatformPage() {
             </div>
             <div className="relative">
               <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-                <Image
-                  src="/products/merchant_dashboard_1.webp"
+                <img src="/products/merchant_dashboard.png" alt="Merchant Dashboard Hero" />
+                {/* <Image
+                  src="/products/merchant_dashboard.png"
                   alt="Merchant Dashboard Hero"
                   fill
                   className="object-cover object-top"
                   priority
-                />
+                /> */}
               </div>
               {/* Decorative Elements */}
               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary-100 rounded-full blur-xl opacity-50 -z-10"></div>

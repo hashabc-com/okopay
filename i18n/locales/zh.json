@@ -24,7 +24,8 @@
     },
     "subAbout": {
       "company": "公司介绍",
-      "consult": "立即咨询"
+      "consult": "立即咨询",
+      "contact": "联系我们"
     }
   },
   "hero": {
@@ -38,7 +39,7 @@
   "home": {
     "hero": {
       "title": "值得信赖的本地支付服务专家",
-      "subtitle": "OkoPay - 您的本地支付解决方案专家 - 贝酷科技"
+      "subtitle": "OkoPay - 您的本地支付解决方案专家"
     },
     "licenses": {
       "title": "牌照齐全 本地直连",

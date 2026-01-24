@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // 调用后端API
-    const response = await fetch('https://admin-test.taropay.com/admin/customerInfoFollowUp/sendEmail', {
+    const response = await fetch('https://admin.taropay.com/admin/customerInfoFollowUp/sendEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
